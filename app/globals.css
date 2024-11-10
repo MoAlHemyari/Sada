@@ -1,0 +1,65 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
+  body {
+    @apply bg-white;
+  }
+  button {
+    @apply rounded-[1.5rem];
+  }
+  p {
+    @apply text-base text-grey;
+  }
+  a {
+    @apply text-grey;
+  }
+  a:hover {
+    @apply text-blue-4;
+  }
+  .tree-section {
+    @apply [&>*:nth-child(n+3)]:my-20 [&>*:last-child]:mb-10;
+  }
+  .shrinked-width-80 {
+    @apply max-w-[80rem] mx-auto;
+  }
+  .shrinked-width-70 {
+    @apply max-w-[70rem] mx-auto;
+  }
+  .shrinked-width-50 {
+    @apply max-w-[50rem] mx-auto;
+  }
+  .headline-wrapper {
+    @apply flex flex-col gap-2 text-center items-center mx-auto max-w-[30rem] py-10;
+  }
+  .headline {
+    @apply text-xl font-bold text-blue-4;
+  }
+  .sub-headline {
+    @apply text-4xl font-bold text-blue-1;
+  }
+  .second-headline {
+    @apply text-3xl font-bold text-blue-1;
+  }
+  .undraggable {
+    user-drag: none;
+    -webkit-user-drag: none;
+    /* pointer-events: none; */
+
+    user-select: none;
+    -moz-user-select: none; /* Firefox */
+    -webkit-user-select: none; /* Chrome, Safari */
+    -ms-user-select: none; /* Internet Explorer and Edge */
+  }
+  .container {
+    @apply py-9;
+    /* desktop:px-16 tablet:px-24 px-4 py-8 text-center  */
+  }
+  /*[class="container"] {
+     @apply 
+  }*/
+}

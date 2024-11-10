@@ -1,0 +1,273 @@
+{
+  "metadata": {
+    "title": "Sada | Elevating Your Customer Experience",
+    "description": "All-in-one Saudi platform for collecting, analyzing, and acting on customer feedback."
+  },
+  "header": {
+    "logo": { "alt": "Sada Logo" },
+    "navbar": {
+      "about": "About",
+      "features": "Features",
+      "pricing": "Pricing",
+      "careers": "Careers",
+      "book_demo": "Book A Demo",
+      "contactUs": "Contact Us"
+    }
+  },
+  "hero_section": {
+    "headline": "Elevate Your Customer Experience",
+    "subheadline": "All-in-one Saudi platform for collecting, analyzing, and acting on customer feedback.",
+    "cta_button": "Contact us",
+    "learn_more": "Learn more",
+    "hero_image": {
+      "DEFAULT": "Interfaces",
+      "Mobile_interface": "Mobile interface",
+      "Dashboard_interface": "Dashboard interface"
+    }
+  },
+  "statistics_section": {
+    "customers_surveyed": { "text": "customers surveyed.", "num": "+700k" },
+    "issued_CX_reports": { "text": "issued CX reports.", "num": "+1100" },
+    "enhanced_experiences": {
+      "text": "enhanced experiences.",
+      "num": "+900"
+    },
+    "description": "Sada delivers powerful, trusted tools that turn customer insights into impactful experiences across all industries."
+  },
+  "about_section": {
+    "headline": "What Sada Does",
+    "subheadline": "Empowering Your Every Customer Interaction",
+    "brief": [
+      {
+        "text": "Sada",
+        "style": "bold"
+      },
+      {
+        "text": " is a comprehensive platform focused on enhancing organizational customer experience. With ",
+        "style": "normal"
+      },
+      {
+        "text": "over six years of experience",
+        "style": "bold"
+      },
+      {
+        "text": " as consultants and technology partners across various sectors, ",
+        "style": "normal"
+      },
+      {
+        "text": "Sada",
+        "style": "bold"
+      },
+      {
+        "text": " integrates top international tools to provide an ",
+        "style": "normal"
+      },
+      {
+        "text": "all-in-one solution",
+        "style": "bold"
+      },
+      {
+        "text": ". We go beyond data and surveys, delivering a truly elevated customer experience.",
+        "style": "normal"
+      }
+    ]
+  },
+  "clients_section": {
+    "headline": "Our Partners",
+    "subheadline": "Driving Success, Together",
+    "clients_entities": {
+      "ministry_of_housing": {
+        "alt": "Ministry of Housing",
+        "src": "ministry-of-housing"
+      },
+      "saudi_food_drug_authority": {
+        "alt": "Saudi Food & Drug Authority",
+        "src": "sfda"
+      },
+      "GACA": {
+        "alt": "General Authority of Civil Aviation (GACA)",
+        "src": "gaca"
+      },
+      "GEA": {
+        "alt": "General Entertainment Authority (GEA)",
+        "src": "gea"
+      },
+      "national_events_center": {
+        "alt": "National Events Center",
+        "src": "national-events-center"
+      },
+      "KAUST": {
+        "alt": "King Abdullah University of Science and Technology (KAUST)",
+        "src": "kaust"
+      },
+      "PSU": { "alt": "Prince Sultan University (PSU)", "src": "psu" },
+      "king_faisal_specialist_hospital_research_center": {
+        "alt": "King Faisal Specialist Hospital & Research Center",
+        "src": "kfshrc"
+      },
+      "solutions_by_STC": { "alt": "Solutions by STC", "src": "sbystc" },
+      "thiqah": { "alt": "Thiqah", "src": "thiqah" }
+    }
+  },
+  "services_section": {
+    "headline": "Our Services",
+    "subheadline": "Insightful Analysis for Meaningful Action",
+    "sections": {
+      "services": {
+        "headline": "Complete Analysis of User Journey",
+        "description": "Detailed analysis of the customer journey, from the first interaction with your service to the last one."
+      },
+      "features": {
+        "headline": "Powerful Features for Real Results",
+        "description": "Versatile features designed to enhance performance across diverse applications, from surveys to analytics.",
+        "components": {
+          "localization": {
+            "headline": "Localization",
+            "description": "Tailored for Saudi audience with language customization for seamless engagement."
+          },
+          "survey_management": {
+            "headline": "Survey Management",
+            "description": "Advanced tools to create, manage, and deploy long or short surveys as needed."
+          },
+          "comprehensive_dashboard": {
+            "headline": "Comprehensive Dashboard",
+            "description": "Our dashboard offers advanced features for viewing and analyzing surveys with interactive visualizations, real-time updates, and customizable filters, enabling quick insights and branded report exports."
+          }
+        }
+      },
+      "solutions": {
+        "headline": "Built for Every Space",
+        "description": "Adaptable for every setting, from retail to public spaces and offices.",
+        "components": {
+          "gatherings": {
+            "headline": "Gatherings",
+            "description": "Enhancing engagement at events, festivals, and retail spaces."
+          },
+          "workspaces": {
+            "headline": "Workspaces",
+            "description": "Supporting productivity in offices, innovation hubs, and SMEs."
+          },
+          "transit_hubs": {
+            "headline": "Transit Hubs",
+            "description": "Streamlining operations in airports, metro stations, and public facilities."
+          },
+          "healthcare": {
+            "headline": "Healthcare",
+            "description": "Improving services and communication in hospitals, clinics, and pharmacies."
+          }
+        }
+      }
+    }
+  },
+  "tools_section": {
+    "headline": "Our Tools",
+    "subheadline": "Empowering Your CX with Powerful Tools",
+    "tools": {
+      "survey_tool": {
+        "headline": "Survey Tool",
+        "description": "A versatile tool to gather real-time feedback from customers at every touchpoint, designed for ease of use across multiple channels.",
+        "image_alt": "Survey interface in",
+        "switcher": {
+          "tablet": { "name" : "Tablet", "src" : "tablet"},
+          "kiosk": { "name" : "Kiosk", "src" : "kiosk" }
+        }
+      },
+      "decision_dashboard": {
+        "headline": "Decision Dashboard",
+        "description": "A comprehensive platform integrating survey and feedback tools with a powerful analytics dashboard for a seamless customer experience journey.",
+        "image_alt": "Decision dashboard interface"
+      }
+    }
+  },
+  "footer": {
+    "comma" : ",",
+    "CTA_box": {
+      "headline": "Experience Sada Firsthand",
+      "description": "Let us show you how Sada adapts to business needs, gathering insights to help you make data-driven decisions.",
+      "cta_button": "Get in touch"
+    },
+    "social_media": {
+      "linkedin": {
+        "name": "LinkedIn",
+        "src": "linkedin",
+        "link": "https://www.linkedin.com/company/sadaacx/"
+      },
+      "instagram": {
+        "name": "Instagram",
+        "src": "instagram",
+        "link": "https://www.instagram.com/saadacx/"
+      },
+      "x": {
+        "name": "X (formerly Twitter)",
+        "src": "x",
+        "link": "https://x.com/saadaCX/"
+      }
+    },
+    "links": {
+      "about": { "name": "About", "link": "about"},
+      "features": { "name": "Features", "link": "features" },
+      "pricing": { "name": "Pricing", "link": "pricing" },
+      "careers": { "name": "Careers", "link": "careers" },
+      "contact": { "name": "Contact", "link": "contact" },
+      "privacy_policy": { "name": "Privacy Policy", "link": "privacy-policy" },
+      "terms_of_service": {
+        "name": "Terms of Service",
+        "link": "terms-of-service"
+      }
+    }
+  },
+  "error_messages": {
+    "404": {
+      "title": "Page Not Found",
+      "description": "Sorry, the page you are looking for does not exist."
+    },
+    "403": {
+      "title": "Forbidden",
+      "description": "You do not have permission to access this page."
+    },
+    "500": {
+      "title": "Internal Server Error",
+      "description": "Something went wrong on our end. Please try again later."
+    },
+    "401": {
+      "title": "Unauthorized",
+      "description": "You need to be logged in to view this page."
+    },
+    "400": {
+      "title": "Bad Request",
+      "description": "The request could not be understood or was missing required parameters."
+    },
+    "408": {
+      "title": "Request Timeout",
+      "description": "The server timed out waiting for your request. Please try again."
+    },
+    "429": {
+      "title": "Too Many Requests",
+      "description": "You have made too many requests in a short period. Please wait and try again."
+    },
+    "502": {
+      "title": "Bad Gateway",
+      "description": "The server received an invalid response from the upstream server."
+    },
+    "503": {
+      "title": "Service Unavailable",
+      "description": "The server is currently unavailable. Please try again later."
+    },
+    "504": {
+      "title": "Gateway Timeout",
+      "description": "The server took too long to respond. Please try again later."
+    },
+    "422": {
+      "title": "Unprocessable Entity",
+      "description": "The server understands the request but is unable to process it."
+    },
+    "410": {
+      "title": "Gone",
+      "description": "The page you are looking for is no longer available."
+    },
+    "406": {
+      "title": "Not Acceptable",
+      "description": "The server cannot provide a response matching the request's criteria."
+    }
+  }
+}

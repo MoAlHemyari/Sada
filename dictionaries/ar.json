@@ -1,0 +1,277 @@
+{
+  "metadata": {
+    "title": "صدى | رفع تجربة عملائك",
+    "description": "منصة سعودية شاملة لجمع وتحليل والتفاعل مع آراء العملاء."
+  },
+  "header": {
+    "logo": { "alt": "شعار صدى" },
+    "navbar": {
+      "about": "من نحن",
+      "features": "المميزات",
+      "pricing": "الأسعار",
+      "careers": "الوظائف",
+      "book_demo": "احجز عرض توضيحي",
+      "contactUs": "تواصل معنا"
+    }
+  },
+  "hero_section": {
+    "headline": "ارتقِ بتجربة عملائك",
+    "subheadline": "منصة سعودية شاملة لجمع وتحليل والتفاعل مع آراء العملاء.",
+    "cta_button": "ابدأ الآن",
+    "learn_more": "انظر المزيد",
+    "hero_image": {
+      "DEFAULT": "الواجهات",
+      "Mobile_interface": "واجهة الجوال",
+      "Dashboard_interface": "واجهة لوحة الإدارة"
+    }
+  },
+  "statistics_section": {
+    "customers_surveyed": {
+      "text": "العملاء المستطلع آراؤهم",
+      "num": "+700 ألف"
+    },
+    "issued_CX_reports": {
+      "text": "تقارير تجربة العملاء الصادرة",
+      "num": "+1100"
+    },
+    "enhanced_experiences": {
+      "text": "التجارب المحسنة",
+      "num": "+900"
+    },
+    "description": "تقدم صدى أدوات قوية وموثوقة تحول آراء العملاء إلى تجارب مؤثرة في جميع القطاعات."
+  },
+  "about_section": {
+    "headline": "ماذا تقدم صدى",
+    "subheadline": "تمكين كل تفاعل مع عملائك",
+    "brief": [
+      {
+        "text": "صدى",
+        "style": "bold"
+      },
+      {
+        "text": " هي منصة شاملة تهدف إلى تحسين تجربة العملاء في المؤسسات. مع ",
+        "style": "normal"
+      },
+      {
+        "text": "أكثر من ست سنوات من الخبرة",
+        "style": "bold"
+      },
+      {
+        "text": " كشركاء استشاريين وتقنيين في مختلف القطاعات، ",
+        "style": "normal"
+      },
+      {
+        "text": "صدى",
+        "style": "bold"
+      },
+      {
+        "text": " تتكامل مع أفضل الأدوات الدولية لتقديم ",
+        "style": "normal"
+      },
+      {
+        "text": "حل شامل",
+        "style": "bold"
+      },
+      {
+        "text": ". نحن لا نكتفي بالبيانات والاستطلاعات، بل نقدم تجربة عملاء متميزة.",
+        "style": "normal"
+      }
+    ]
+  },
+  "clients_section": {
+    "headline": "شركاؤنا",
+    "subheadline": "نحو النجاح، معًا",
+    "clients_entities": {
+      "ministry_of_housing": {
+        "alt": "وزارة الإسكان",
+        "src": "ministry-of-housing"
+      },
+      "saudi_food_&_drug_authority": {
+        "alt": "الهيئة العامة للغذاء والدواء",
+        "src": "sfda"
+      },
+      "general_authority_of_civil_aviation": {
+        "alt": "الهيئة العامة للطيران المدني",
+        "src": "gaca"
+      },
+      "general_entertainment_authority": {
+        "alt": "الهيئة العامة للترفيه",
+        "src": "gea"
+      },
+      "national_events_center": {
+        "alt": "مركز الفعاليات الوطني",
+        "src": "national-events-center"
+      },
+      "KAUST": {
+        "alt": "جامعة الملك عبدالله للعلوم والتقنية",
+        "src": "kaust"
+      },
+      "prince_sultan_university": { "alt": "جامعة الأمير سلطان", "src": "psu" },
+      "king_faisal_specialist_hospital_&_research_center": {
+        "alt": "مستشفى الملك فيصل التخصصي ومركز الأبحاث",
+        "src": "kfshrc"
+      },
+      "solutions_by_STC": { "alt": "حلول STC", "src": "sbystc" },
+      "thiqah": { "alt": "ثقة", "src": "thiqah" }
+    }
+  },
+  "services_section": {
+    "headline": "خدماتنا",
+    "subheadline": "تحليل دقيق من أجل خطوات فعّالة",
+    "sections": {
+      "services": {
+        "headline": "تحليل كامل لرحلة المستخدم",
+        "description": "تحليل مفصل لرحلة العميل منذ أول تفاعل مع خدمتك حتى النهاية."
+      },
+      "features": {
+        "headline": "ميزات قوية لنتائج واقعية",
+        "description": "ميزات متعددة الاستخدامات تهدف إلى تحسين الأداء عبر مختلف التطبيقات، من الاستطلاعات إلى التحليلات.",
+        "components": {
+          "localization": {
+            "headline": "التوطين",
+            "description": "مخصص للجمهور السعودي مع تخصيص اللغة لزيادة التفاعل."
+          },
+          "survey_management": {
+            "headline": "إدارة الاستبيانات",
+            "description": "أدوات متقدمة لإنشاء وإدارة ونشر الاستبيانات الطويلة أو القصيرة حسب الحاجة."
+          },
+          "comprehensive_dashboard": {
+            "headline": "لوحة تحكم شاملة",
+            "description": "توفر لوحة التحكم لدينا ميزات متقدمة لعرض وتحليل الاستبيانات مع تصورات تفاعلية، تحديثات في الوقت الفعلي، وفلاتر قابلة للتخصيص، مما يسهل الوصول إلى الرؤى وتصدير التقارير."
+          }
+        }
+      },
+      "solutions": {
+        "headline": "مصممة لكل بيئة",
+        "description": "قابلة للتكيف مع جميع الأماكن من المتاجر إلى الأماكن العامة والمكاتب.",
+        "components": {
+          "gatherings": {
+            "headline": "التجمعات",
+            "description": "تعزيز التفاعل في الفعاليات، المهرجانات، والمراكز التجارية."
+          },
+          "workspaces": {
+            "headline": "أماكن العمل",
+            "description": "دعم الإنتاجية في المكاتب، مراكز الابتكار، والشركات الصغيرة والمتوسطة."
+          },
+          "transit_hubs": {
+            "headline": "مراكز النقل",
+            "description": "تحسين العمليات في المطارات ومحطات المترو والمرافق العامة."
+          },
+          "healthcare": {
+            "headline": "الرعاية الصحية",
+            "description": "تحسين الخدمات والتواصل في المستشفيات، العيادات، والصيدليات."
+          }
+        }
+      }
+    }
+  },
+  "tools_section": {
+    "headline": "أدواتنا",
+    "subheadline": "تمكين تجربة العملاء بأدوات قوية",
+    "tools": {
+      "survey_tool": {
+        "headline": "أداة الاستبيانات",
+        "description": "أداة متعددة الاستخدامات لجمع آراء العملاء في الوقت الفعلي في جميع نقاط التفاعل، مصممة للاستخدام بسهولة عبر قنوات متعددة.",
+        "image_alt": "واجهة الاستبيان في ال",
+        "switcher": {
+          "tablet": { "name" : "تابلت", "src" : "tablet"},
+          "kiosk": { "name" : "كيوسك", "src" : "kiosk" }
+        }
+      },
+      "decision_dashboard": {
+        "headline": "لوحة القرارات",
+        "description": "منصة شاملة تتكامل مع أدوات الاستبيان وتحليل البيانات لتوفير رحلة تجربة العملاء بشكل متكامل.",
+        "image_alt": "واجهة لوحة القرارات"
+      }
+    }
+  },
+  "footer": {
+    "comma" : "،",
+    "CTA_box": {
+      "headline": "جرب صدى بنفسك",
+      "description": "دعنا نظهر لك كيف يمكن لصدى أن تتكيف مع احتياجات عملك وتجمع رؤى تساعدك في اتخاذ قرارات مبنية على البيانات.",
+      "cta_button": "تواصل معنا"
+    },
+    "social_media": {
+      "linkedin": {
+        "name": "لينكد إن",
+        "src": "linkedin",
+        "link": "https://www.linkedin.com/company/sadaacx/"
+      },
+      "instagram": {
+        "name": "إنستغرام",
+        "src": "instagram",
+        "link": "https://www.instagram.com/saadacx/"
+      },
+      "x": {
+        "name": "X (سابقًا تويتر)",
+        "src": "x",
+        "link": "https://x.com/saadaCX/"
+      }
+    },
+    "links": {
+      "about": { "name": "من نحن", "link": "about" },
+      "features": { "name": "المميزات", "link": "features" },
+      "pricing": { "name": "الأسعار", "link": "pricing" },
+      "careers": { "name": "الوظائف", "link": "careers" },
+      "contact": { "name": "تواصل", "link": "contact" },
+      "privacy_policy": { "name": "سياسة الخصوصية", "link": "privacy-policy" },
+      "terms_of_service": { "name": "شروط الخدمة", "link": "terms-of-service" }
+    }
+  },
+  "error_messages": {
+    "404": {
+      "title": "الصفحة غير موجودة",
+      "description": "عذرًا، الصفحة التي تبحث عنها غير موجودة."
+    },
+    "403": {
+      "title": "ممنوع",
+      "description": "ليس لديك الصلاحيات للوصول إلى هذه الصفحة."
+    },
+    "500": {
+      "title": "خطأ في الخادم الداخلي",
+      "description": "حدث خطأ من طرفنا. يرجى المحاولة لاحقًا."
+    },
+    "401": {
+      "title": "غير مصرح",
+      "description": "تحتاج إلى تسجيل الدخول لعرض هذه الصفحة."
+    },
+    "400": {
+      "title": "طلب غير صحيح",
+      "description": "لم يتم فهم الطلب أو كان ناقصًا في البيانات المطلوبة."
+    },
+    "408": {
+      "title": "انتهت مدة الطلب",
+      "description": "انتهت مدة الانتظار للطلب. يرجى المحاولة مجددًا."
+    },
+    "429": {
+      "title": "طلبات كثيرة جدًا",
+      "description": "لقد قمت بطلبات كثيرة في فترة زمنية قصيرة. يرجى الانتظار والمحاولة مرة أخرى."
+    },
+    "502": {
+      "title": "بوابة غير صالحة",
+      "description": "تلقى الخادم استجابة غير صالحة من الخادم العلوي."
+    },
+
+    "503": {
+      "title": "الخدمة غير متوفرة",
+      "description": "الخادم غير متاح حاليًا. يرجى المحاولة لاحقًا."
+    },
+    "504": {
+      "title": "انتهاء مدة الاستجابة",
+      "description": "استغرق الخادم وقتًا طويلًا للرد. يرجى المحاولة لاحقًا."
+    },
+    "422": {
+      "title": "كيان غير قابل للمعالجة",
+      "description": "الخادم يفهم الطلب ولكنه غير قادر على معالجته."
+    },
+    "410": {
+      "title": "غير متاح",
+      "description": "الصفحة التي تبحث عنها لم تعد متوفرة."
+    },
+    "406": {
+      "title": "غير مقبول",
+      "description": "لا يمكن للخادم تقديم استجابة تطابق معايير الطلب."
+    }
+  }
+}
