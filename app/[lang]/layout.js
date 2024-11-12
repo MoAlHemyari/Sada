@@ -1,6 +1,7 @@
 import "@/app/globals.css";
 import { getDictionary } from "@/get-dictionary";
 import { IBM_Plex_Sans_Arabic } from "next/font/google";
+import { ThemeProvider } from "@/components/theme-provider";
 
 const myFont = IBM_Plex_Sans_Arabic({
   subsets: ["latin"],
@@ -28,10 +29,18 @@ export async function generateMetadata({ params }) {
 export default async function RootLayout({ children, params }) {
   const { lang } = await params;
 
+
   return (
     <html lang={lang} dir={lang === "ar" ? "rtl" : "ltr"}>
       <body className={`${myFont.variable} font-sans`}>
+      {/* <ThemeProvider
+            attribute="class"
+            defaultTheme="system"
+            enableSystem
+            disableTransitionOnChange
+          > */}
         {children}
+        {/* </ThemeProvider> */}
       </body>
     </html>
   );

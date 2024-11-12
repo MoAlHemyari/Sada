@@ -4,7 +4,7 @@ import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 
-export default function SurveyTool({ dict }) {
+export default function SurveyTool({ dict, lang }) {
   dict = dict.tools.survey_tool;
   const [view, setView] = useState(dict.switcher.tablet);
 
@@ -23,7 +23,9 @@ export default function SurveyTool({ dict }) {
           {/* Sliding Highlight Background */}
           <span
             className={`absolute top-1 bottom-1 left-1 w-[calc(50%-0.25rem)] shadow-sm bg-blue-3 rounded-full transition-all duration-300 ${
-              view === dict.switcher.kiosk ? "translate-x-full" : "translate-x-0"
+              view === dict.switcher.kiosk
+                ? "translate-x-full"
+                : "translate-x-0"
             }`}
           />
 
@@ -55,10 +57,8 @@ export default function SurveyTool({ dict }) {
         {/* Display Image Based on View */}
         <Image
           src={`/image/tool/survrey-tool-${view.src}.svg`}
-          alt={`${dict.image_alt}${
-            document.documentElement.lang !== "ar" ? " " : ""
-          }${view}`}
-          className="undraggable shrinked-width-70 h-[40rem]"
+          alt={`${dict.image_alt}${lang !== "ar" ? " " : ""}${view}`}
+          className="undraggable shrinked-width-70"
           width={1920}
           height={1080}
           draggable={false}

@@ -11,7 +11,8 @@
       "pricing": "Pricing",
       "careers": "Careers",
       "book_demo": "Book A Demo",
-      "contactUs": "Contact Us"
+      "contact_us": "Contact Us",
+      "select_language": "Select Language"
     }
   },
   "hero_section": {
@@ -26,11 +27,17 @@
     }
   },
   "statistics_section": {
-    "customers_surveyed": { "text": "customers surveyed.", "num": "+700k" },
-    "issued_CX_reports": { "text": "issued CX reports.", "num": "+1100" },
+    "customers_surveyed": {
+      "text": "customers surveyed.",
+      "num": { "num": "700", "suffix": "k" }
+    },
+    "issued_CX_reports": {
+      "text": "issued CX reports.",
+      "num": { "num": "1100", "suffix": "" }
+    },
     "enhanced_experiences": {
       "text": "enhanced experiences.",
-      "num": "+900"
+      "num": { "num": "900", "suffix": "" }
     },
     "description": "Sada delivers powerful, trusted tools that turn customer insights into impactful experiences across all industries."
   },
@@ -168,8 +175,8 @@
         "description": "A versatile tool to gather real-time feedback from customers at every touchpoint, designed for ease of use across multiple channels.",
         "image_alt": "Survey interface in",
         "switcher": {
-          "tablet": { "name" : "Tablet", "src" : "tablet"},
-          "kiosk": { "name" : "Kiosk", "src" : "kiosk" }
+          "tablet": { "name": "Tablet", "src": "tablet" },
+          "kiosk": { "name": "Kiosk", "src": "kiosk" }
         }
       },
       "decision_dashboard": {
@@ -180,7 +187,7 @@
     }
   },
   "footer": {
-    "comma" : ",",
+    "comma": ",",
     "CTA_box": {
       "headline": "Experience Sada Firsthand",
       "description": "Let us show you how Sada adapts to business needs, gathering insights to help you make data-driven decisions.",
@@ -204,7 +211,7 @@
       }
     },
     "links": {
-      "about": { "name": "About", "link": "about"},
+      "about": { "name": "About", "link": "about" },
       "features": { "name": "Features", "link": "features" },
       "pricing": { "name": "Pricing", "link": "pricing" },
       "careers": { "name": "Careers", "link": "careers" },

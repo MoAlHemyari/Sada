@@ -8,6 +8,7 @@ import ServiceSection from "@/components/layout/ServiceSection/_";
 import ToolsSection from "@/components/layout/ToolsSection/_";
 import FooterSection from "@/components/layout/FooterSection/_";
 import CTASection from "@/components/layout/CTASection/_";
+import ClientSettings from "@/components/layout/ClientSettings";
 
 export default async function Home({ params }) {
   const { lang } = await params;
@@ -19,13 +20,14 @@ export default async function Home({ params }) {
       <HeroSection dict={dict} lang={lang} />
       <StatisticsSection dict={dict} lang={lang} />
       <AboutSection dict={dict} />
-      <ClientsSection dict={dict} />
+      <ClientsSection dict={dict} lang={lang} />
       <ServiceSection dict={dict} />
-      <ToolsSection dict={dict} />
+      <ToolsSection dict={dict} lang={lang} />
       <div className="bg-gradient-to-t from-blue-6 to-white">
         <CTASection dict={dict} lang={lang} />
         <FooterSection dict={dict} lang={lang} />
       </div>
+      <ClientSettings />
     </>
   );
 }

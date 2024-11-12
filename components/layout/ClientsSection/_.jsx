@@ -1,6 +1,6 @@
 import Image from "next/image";
 
-export default function Clients({ dict }) {
+export default function ClientsSection({ dict, lang }) {
   dict = dict.clients_section;
   const clients = dict.clients_entities;
 
@@ -14,19 +14,19 @@ export default function Clients({ dict }) {
         {Object.values(clients).map((client, index) => (
           <div
             key={client.src}
-            className={`grid ${
+            className={`grid w-max ${
               index === Object.values(clients).length - 1
                 ? "tablet:last:col-span-3 desktop:last:col-span-1 tablet:justify-self-center"
                 : ""
             } ${
               index % 2 === 0
-                ? "tablet:justify-self-center justify-self-end"
-                : "tablet:justify-self-center justify-self-start"
+                ? "tablet:justify-self-center justify-self-start"
+                : "tablet:justify-self-center justify-self-end"
             }`}
           >
             <Image
               src={`./image/logo/${client.src}.svg`}
-              alt={`${client.alt} Logo`}
+              alt={`${lang === "ar" ? "شعار ": ""}${client.alt}${lang === "en" ? " Logo" : ""}`}
               width={80}
               height={32}
               className="h-20 w-auto undraggable"

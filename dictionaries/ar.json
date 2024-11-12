@@ -11,7 +11,8 @@
       "pricing": "الأسعار",
       "careers": "الوظائف",
       "book_demo": "احجز عرض توضيحي",
-      "contactUs": "تواصل معنا"
+      "contact_us": "تواصل معنا",
+      "select_language": "اختر لغةً"
     }
   },
   "hero_section": {
@@ -28,15 +29,15 @@
   "statistics_section": {
     "customers_surveyed": {
       "text": "العملاء المستطلع آراؤهم",
-      "num": "+700 ألف"
+      "num": { "num": "700", "suffix": "ألف" }
     },
     "issued_CX_reports": {
       "text": "تقارير تجربة العملاء الصادرة",
-      "num": "+1100"
+      "num": { "num": "1100", "suffix": "" }
     },
     "enhanced_experiences": {
       "text": "التجارب المحسنة",
-      "num": "+900"
+      "num": { "num": "900", "suffix": "" }
     },
     "description": "تقدم صدى أدوات قوية وموثوقة تحول آراء العملاء إلى تجارب مؤثرة في جميع القطاعات."
   },
@@ -174,8 +175,8 @@
         "description": "أداة متعددة الاستخدامات لجمع آراء العملاء في الوقت الفعلي في جميع نقاط التفاعل، مصممة للاستخدام بسهولة عبر قنوات متعددة.",
         "image_alt": "واجهة الاستبيان في ال",
         "switcher": {
-          "tablet": { "name" : "تابلت", "src" : "tablet"},
-          "kiosk": { "name" : "كيوسك", "src" : "kiosk" }
+          "tablet": { "name": "تابلت", "src": "tablet" },
+          "kiosk": { "name": "كيوسك", "src": "kiosk" }
         }
       },
       "decision_dashboard": {
@@ -186,7 +187,7 @@
     }
   },
   "footer": {
-    "comma" : "،",
+    "comma": "،",
     "CTA_box": {
       "headline": "جرب صدى بنفسك",
       "description": "دعنا نظهر لك كيف يمكن لصدى أن تتكيف مع احتياجات عملك وتجمع رؤى تساعدك في اتخاذ قرارات مبنية على البيانات.",

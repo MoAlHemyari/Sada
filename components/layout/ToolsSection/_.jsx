@@ -2,7 +2,7 @@ import Image from "next/image";
 import SurveyTool from "./SurveyTool";
 import DecisionDashboard from "./DecisionDashboard";
 
-export default function ToolsSection({ dict }) {
+export default function ToolsSection({ dict, lang }) {
   dict = dict.tools_section;
   return (
     <section className="container tree-section">
@@ -20,7 +20,7 @@ export default function ToolsSection({ dict }) {
         draggable={false}
       />
 
-      <SurveyTool dict={dict} />
+      <SurveyTool dict={dict} lang={lang} />
       <DecisionDashboard dict={dict} />
     </section>
   );

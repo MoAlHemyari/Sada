@@ -14,7 +14,7 @@ export default function DecisionDashboard({ dict }) {
       <Image
         src="/image/tool/decision-dashboard.svg"
         alt={dict.image_alt}
-        className="undraggable shrinked-width-70 h-[40rem]"
+        className="undraggable shrinked-width-70"
         width={1920}
         height={1080}
         draggable={false}

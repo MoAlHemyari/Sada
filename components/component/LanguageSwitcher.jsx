@@ -1,17 +1,31 @@
 "use client";
 
-import Link from "next/link";
-import { i18n } from "@/i18n-config";
-import { Button } from "@/components/ui/button";
+import {
+  Select,
+  SelectContent,
+  SelectGroup,
+  SelectItem,
+  SelectTrigger,
+  SelectValue,
+} from "@/components/ui/select";
 
 export default function LanguageSwitcher({ lang, className }) {
-  const switchedTo = i18n.locales.find((locale) => locale !== lang);
 
   return (
-    <Link href={`/${switchedTo}`}>
-      <Button variant="ghost" className={className}>
-        {switchedTo !== "ar" ? switchedTo.toUpperCase() : "العربية"}
-      </Button>
-    </Link>
+    <Select
+      value={lang}
+      onValueChange={(e) => (window.location.href = `/${e}`)}
+      dir={`${lang === "ar" ? "rtl" : "ltr"}`}
+    >
+      <SelectTrigger className="w-24">
+        <SelectValue placeholder={lang === "ar" ? "العربية" : "English"} />
+      </SelectTrigger>
+      <SelectContent>
+        <SelectGroup>
+          <SelectItem value="ar">العربية</SelectItem>
+          <SelectItem value="en">Engilsh</SelectItem>
+        </SelectGroup>
+      </SelectContent>
+    </Select>
   );
 }
