@@ -173,8 +173,8 @@
       "survey_tool": {
         "headline": "أداة الاستبيانات",
         "description": "أداة متعددة الاستخدامات لجمع آراء العملاء في الوقت الفعلي في جميع نقاط التفاعل، مصممة للاستخدام بسهولة عبر قنوات متعددة.",
-        "image_alt": "واجهة الاستبيان في ال",
         "switcher": {
+          "image_alt": "واجهة الاستبيان في ال",
           "tablet": { "name": "تابلت", "src": "tablet" },
           "kiosk": { "name": "كيوسك", "src": "kiosk" }
         }
@@ -211,11 +211,11 @@
       }
     },
     "links": {
+      "contact": { "name": "تواصل", "link": "contact" },
       "about": { "name": "من نحن", "link": "about" },
       "features": { "name": "المميزات", "link": "features" },
       "pricing": { "name": "الأسعار", "link": "pricing" },
       "careers": { "name": "الوظائف", "link": "careers" },
-      "contact": { "name": "تواصل", "link": "contact" },
       "privacy_policy": { "name": "سياسة الخصوصية", "link": "privacy-policy" },
       "terms_of_service": { "name": "شروط الخدمة", "link": "terms-of-service" }
     }

@@ -5,7 +5,7 @@ import DecisionDashboard from "./DecisionDashboard";
 export default function ToolsSection({ dict, lang }) {
   dict = dict.tools_section;
   return (
-    <section className="container tree-section">
+    <section className="container tree-section" id="tools">
       <div className="headline-wrapper">
         <h2 className="headline">{dict.headline}</h2>
         <h3 className="sub-headline">{dict.subheadline}</h3>

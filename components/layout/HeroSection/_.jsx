@@ -9,20 +9,21 @@ export default function HeroSection({ lang, dict }) {
     <main className="container">
       <div className="grid desktop:grid-cols-2 items-center gap-12 px-4">
         <div className="space-y-6 desktop:text-start text-center desktop:px-1 tablet:px-10">
-          <h1 className="desktop:text-5xl tablet:text-6xl text-4xl font-bold text-[#143881] leading-tight">
+          <h1 className="desktop:text-5xl tablet:text-6xl text-4xl font-bold leading-tight">
             {dict.headline}
           </h1>
           <p>{dict.subheadline}</p>
           <div className="flex desktop:justify-start justify-center flex-row gap-4">
             <Link href="/contact">
-              <Button className="bg-[#1C4FB5] hover:bg-[#143881] shadow-sm text-white px-4 py-3">
+              <Button 
+                >
                 {dict.cta_button}
               </Button>
             </Link>
             <Link href="/learn-more">
               <Button
                 variant="outline"
-                className="text-[#143881] hover:text-[#1C4FB5] border-none shadow-none hover:bg-transparent px-4 py-3"
+                className="text-blue-4"
               >
                 {dict.learn_more} {lang !== 'ar' ? <ArrowRight className="ml-2 h-4 w-4" /> : <ArrowLeft className="ml-2 h-4 w-4" />}
               </Button>

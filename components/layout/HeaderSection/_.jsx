@@ -2,9 +2,9 @@ import { Button } from "@/components/ui/button";
 import LanguageSwitcher from "@/components/component/LanguageSwitcher";
 import Image from "next/image";
 import Link from "next/link";
-import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { Menu } from "lucide-react";
-import { ModeToggle } from "@/components/ui/mode-toggle";
+import DesktopNavigation from "@/components/layout/HeaderSection/DesktopNavigation";
+import MobileNavigation from "@/components/layout/HeaderSection/MobileNavigation";
+// import { ModeToggle } from "@/components/ui/mode-toggle";
 
 export default function HeaderSection({ lang, dict }) {
   dict = dict.header;
@@ -22,12 +22,7 @@ export default function HeaderSection({ lang, dict }) {
               className="h-5 w-auto blue-filter-img"
             />
           </Link>
-          <div className="hidden tablet:flex gap-10 ">
-            <Link href={`/${lang}/about`}>{dict.navbar.about}</Link>
-            <Link href={`/${lang}/features`}>{dict.navbar.features}</Link>
-            <Link href={`/${lang}/pricing`}>{dict.navbar.pricing}</Link>
-            <Link href={`/${lang}/careers`}>{dict.navbar.careers}</Link>
-          </div>
+          <DesktopNavigation lang={lang} dict={dict} />
         </div>
 
         <div className="hidden tablet:flex items-center gap-4">
@@ -36,25 +31,7 @@ export default function HeaderSection({ lang, dict }) {
           {/* <ModeToggle /> */}
         </div>
 
-        <Sheet>
-          <SheetTrigger asChild>
-            <Button variant="ghost" size="icon" className="tablet:hidden">
-              <Menu className="h-6 w-6" />
-            </Button>
-          </SheetTrigger>
-          <SheetContent side={lang === "ar" ? "left" : "right"} className="w-[300px] tablet:w-[400px]">
-            <nav className="flex flex-col space-y-4 mt-8">
-              <Link href={`/${lang}/about`}>{dict.navbar.about}</Link>
-              <Link href={`/${lang}/features`}>{dict.navbar.features}</Link>
-              <Link href={`/${lang}/pricing`}>{dict.navbar.pricing}</Link>
-              <Link href={`/${lang}/careers`}>{dict.navbar.careers}</Link>
-              <Button variant="outline" className="w-full">
-                {dict.navbar.book_demo}
-              </Button>
-              <LanguageSwitcher lang={lang} className="w-full" />
-            </nav>
-          </SheetContent>
-        </Sheet>
+        <MobileNavigation lang={lang} dict={dict} />
       </nav>
     </header>
   );

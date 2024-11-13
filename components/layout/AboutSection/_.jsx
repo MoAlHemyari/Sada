@@ -2,9 +2,9 @@ export default function About({ dict }) {
   dict = dict.about_section;
 
   return (
-    <section className="container">
+    <section className="container willScrollTo" id="about">
       <div className="bg-blue-6 rounded-xl">
-        <div className="grid desktop:grid-cols-2 desktop:gap-16 gap-4 p-20 items-center">
+        <div className="grid desktop:grid-cols-2 desktop:gap-16 gap-4 px-12 py-20 items-center">
           <div className="desktop:jusify-start tablet:justify-center">
             <h2 className="headline text-lg">{dict.headline}</h2>
             <h3 className="sub-headline text-3xl">{dict.subheadline}</h3>

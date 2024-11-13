@@ -8,7 +8,7 @@ import ServiceSection from "@/components/layout/ServiceSection/_";
 import ToolsSection from "@/components/layout/ToolsSection/_";
 import FooterSection from "@/components/layout/FooterSection/_";
 import CTASection from "@/components/layout/CTASection/_";
-import ClientSettings from "@/components/layout/ClientSettings";
+import ClientSideFunctions from "@/components/layout/ClientSideFunctions";
 
 export default async function Home({ params }) {
   const { lang } = await params;
@@ -27,7 +27,7 @@ export default async function Home({ params }) {
         <CTASection dict={dict} lang={lang} />
         <FooterSection dict={dict} lang={lang} />
       </div>
-      <ClientSettings />
+      <ClientSideFunctions />
     </>
   );
 }

@@ -11,13 +11,13 @@
     --card-foreground: 222.2 84% 4.9%;
     --popover: 0 0% 100%;
     --popover-foreground: 222.2 84% 4.9%;
-    --primary: 222.2 47.4% 11.2%;
+    --primary: 220 71% 35%;
     --primary-foreground: 210 40% 98%;
     --secondary: 210 40% 96.1%;
     --secondary-foreground: 222.2 47.4% 11.2%;
-    --muted: 210 40% 96.1%;
-    --muted-foreground: 215.4 16.3% 46.9%;
-    --accent: 210 40% 96.1%;
+    --muted: 231 100% 97%;
+    --muted-foreground: 219.84 50.61% 51.57%;
+    --accent: 231 100% 97%;
     --accent-foreground: 220 71% 35%;
     --destructive: 0 84.2% 60.2%;
     --destructive-foreground: 210 40% 98%;
@@ -32,6 +32,9 @@
   }
   p {
     @apply text-base text-grey;
+  }
+  span {
+    @apply text-blue-2;
   }
   a {
     @apply text-grey;
@@ -79,6 +82,12 @@
     -webkit-user-select: none; /* Chrome, Safari */
     -ms-user-select: none; /* Internet Explorer and Edge */
   }
+  .filter-blue-2 {
+    filter: brightness(0) saturate(100%) invert(19%) sepia(35%) saturate(4615%) hue-rotate(212deg) brightness(93%) contrast(91%);
+  }
+  .filter-blue-2:hover {
+    filter: brightness(0) saturate(100%) invert(40%) sepia(41%) saturate(854%) hue-rotate(181deg) brightness(95%) contrast(89%);
+  }
   header {
     @apply bg-white transition-all duration-500 ease-in-out;
   }
@@ -86,12 +95,25 @@
     @apply sticky top-0 z-50 shadow-md;
   }
   .scrolled-header nav {
-    @apply py-2;
+    @apply py-1;
   }
   .container {
     @apply py-9;
     /* desktop:px-16 tablet:px-24 px-4 py-8 text-center  */
   }
+
+  /* Set up scroll snap */
+html, body {
+  scroll-behavior: smooth;
+}
+body {
+  overflow-y: scroll;
+  scroll-snap-type: y mandatory;
+}
+.willScrollTo {
+  scroll-snap-align: start;
+  scroll-margin: 2.5rem;
+}
 
   .dark {
     --background: 222.2 84% 4.9%;

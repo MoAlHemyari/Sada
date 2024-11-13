@@ -11,7 +11,7 @@ export default function Solutions({ dict }) {
 
       <div className="grid tablet:grid-cols-2 gap-6 shrinked-width-50">
         {/* Gatherings Card */}
-        <div className="bg-blue-7 rounded-lg p-10">
+        <div className="bg-blue-7 rounded-lg p-12 tablet:p-10">
           <div className="mb-4">
             <Emoji name="party-popper" alt="party-popper" size={32} />
           </div>
@@ -24,7 +24,7 @@ export default function Solutions({ dict }) {
         </div>
 
         {/* Workspaces Card */}
-        <div className="bg-blue-7 rounded-lg p-10">
+        <div className="bg-blue-7 rounded-lg p-12 tablet:p-10">
           <div className="mb-4">
           <Emoji name="briefcase" alt="briefcase" size={32} />
           </div>
@@ -37,7 +37,7 @@ export default function Solutions({ dict }) {
         </div>
 
         {/* Transit Hubs Card */}
-        <div className="bg-blue-7 rounded-lg p-10">
+        <div className="bg-blue-7 rounded-lg p-12 tablet:p-10">
           <div className="mb-4">
           <Emoji name="station" alt="station" size={32} />
           </div>
@@ -50,7 +50,7 @@ export default function Solutions({ dict }) {
         </div>
 
         {/* Healthcare Card */}
-        <div className="bg-blue-7 rounded-lg p-10">
+        <div className="bg-blue-7 rounded-lg p-12 tablet:p-10">
           <div className="mb-4">
           <Emoji name="stethoscope" alt="stethoscope" size={32} />
           </div>

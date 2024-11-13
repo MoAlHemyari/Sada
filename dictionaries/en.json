@@ -212,10 +212,10 @@
     },
     "links": {
       "about": { "name": "About", "link": "about" },
+      "contact": { "name": "Contact", "link": "contact" },
       "features": { "name": "Features", "link": "features" },
       "pricing": { "name": "Pricing", "link": "pricing" },
       "careers": { "name": "Careers", "link": "careers" },
-      "contact": { "name": "Contact", "link": "contact" },
       "privacy_policy": { "name": "Privacy Policy", "link": "privacy-policy" },
       "terms_of_service": {
         "name": "Terms of Service",

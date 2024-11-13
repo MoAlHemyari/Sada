@@ -11,7 +11,7 @@ export default function Features({ dict }) {
 
       <div className="grid tablet:grid-cols-2 gap-6 shrinked-width-50">
         {/* Localization Card */}
-        <div className="bg-blue-7 rounded-lg p-10">
+        <div className="bg-blue-7 rounded-lg p-12 tablet:p-10">
           <div className="mb-4">
             <Emoji name="speaker" alt="speaker" size={32} />
           </div>
@@ -24,7 +24,7 @@ export default function Features({ dict }) {
         </div>
 
         {/* Survey Management Card */}
-        <div className="bg-blue-7 rounded-lg p-10">
+        <div className="bg-blue-7 rounded-lg p-12 tablet:p-10">
           <div className="mb-4">
           <Emoji name="writing-hand" alt="writing-hand" size={32} />
           </div>
@@ -37,7 +37,7 @@ export default function Features({ dict }) {
         </div>
 
         {/* Comprehensive Dashboard Card */}
-        <div className="tablet:col-span-2 bg-blue-7 rounded-lg p-10">
+        <div className="tablet:col-span-2 bg-blue-7 rounded-lg p-12 tablet:p-10">
           <div className="mb-4">
           <Emoji name="chart-increasing" alt="chart-increasing" size={32} />
           </div>

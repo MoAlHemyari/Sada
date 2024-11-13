@@ -2,7 +2,7 @@ export default function StatisticsSection({ dict, lang }) {
   dict = dict.statistics_section;
 
   return (
-    <section className="container border-y border-blue-6 py-5">
+    <section className="container border-y border-blue-6 py-5 will-scrolling-after">
       <div className="grid grid-cols-1 tablet:grid-cols-2 gap-8 items-center">
         <div
           className={`grid grid-cols-3 gap-2 text-center tablet:text-start [&_h3]:${

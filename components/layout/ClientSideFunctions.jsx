@@ -2,7 +2,7 @@
 
 import { useEffect } from "react";
 
-export default function ClientSettings() {
+export default function ClientSideFunctions() {
 
   // Stickying header
   useEffect(() => {
@@ -11,7 +11,7 @@ export default function ClientSettings() {
         .querySelector("header")
         ?.classList.toggle(
           "scrolled-header",
-          window.scrollY > document.querySelector("header").scrollHeight
+          window.scrollY > document.querySelector("nav").scrollHeight  // 36 is the padding block start of nav
         );
     };
 
@@ -35,7 +35,7 @@ export default function ClientSettings() {
       let curr = +counter.innerText || 0;
       (function updateNum() {
         curr = Math.ceil(curr + target / 200);
-        inc += 0.3;
+        inc += 0.6;
         counter.textContent = `${prefix}${curr < target ? curr : target}${suffix}`;
         curr < target && setTimeout(updateNum, inc);
       })();
