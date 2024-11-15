@@ -21,7 +21,7 @@ export default async function Home({ params }) {
       <StatisticsSection dict={dict} lang={lang} />
       <AboutSection dict={dict} />
       <ClientsSection dict={dict} lang={lang} />
-      <ServiceSection dict={dict} />
+      <ServiceSection dict={dict} lang={lang} />
       <ToolsSection dict={dict} lang={lang} />
       <div className="bg-gradient-to-t from-blue-6 to-white">
         <CTASection dict={dict} lang={lang} />

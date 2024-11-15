@@ -1,9 +1,9 @@
 import Service from "./Service";
 import Features from "./Features";
 import Solutions from "./Solutions";
-import AnimatedImage from "@/components/component/AnimatedImage";
+import Showcase from "@/components/ui/Showcase";
 
-export default function ServicesSection({ dict }) {
+export default function ServicesSection({ dict, lang }) {
     dict = dict.services_section;
     return (
         <section className="container tree-section" id="features">
@@ -12,9 +12,9 @@ export default function ServicesSection({ dict }) {
                 <h3 className="sub-headline">{dict.subheadline}</h3>
             </div>
 
-            <AnimatedImage />
+            <Showcase />
 
-            <Service dict={dict} />
+            <Service dict={dict} lang={lang} />
             <Features dict={dict} />
             <Solutions dict={dict} />
         </section>

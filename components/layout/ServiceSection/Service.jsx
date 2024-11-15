@@ -1,6 +1,6 @@
-import Image from "next/image";
+import StagesLine from "./StagesLine";
 
-export default function Analysis({ dict }) {
+export default function Analysis({ dict, lang }) {
     dict = dict.sections.services;
     return (
         <section>
@@ -8,9 +8,7 @@ export default function Analysis({ dict }) {
                 <h2 className="second-headline">{dict.headline}</h2>
                 <p className="">{dict.description}</p>
             </div>
-            <Image
-                src="/image/analysis.png" alt="Showcase" className="undraggable" width={1920} height={1080} draggable={false} 
-            />
+            <StagesLine dict={dict} lang={lang} />
         </section>
     );
 }

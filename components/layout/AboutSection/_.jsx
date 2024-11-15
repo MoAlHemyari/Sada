@@ -3,7 +3,7 @@ export default function About({ dict }) {
 
   return (
     <section className="container willScrollTo" id="about">
-      <div className="bg-blue-6 rounded-xl">
+      <div className="bg-blue-7 rounded-xl">
         <div className="grid desktop:grid-cols-2 desktop:gap-16 gap-4 px-12 py-20 items-center">
           <div className="desktop:jusify-start tablet:justify-center">
             <h2 className="headline text-lg">{dict.headline}</h2>

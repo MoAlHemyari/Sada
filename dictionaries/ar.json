@@ -122,7 +122,39 @@
     "sections": {
       "services": {
         "headline": "تحليل كامل لرحلة المستخدم",
-        "description": "تحليل مفصل لرحلة العميل منذ أول تفاعل مع خدمتك حتى النهاية."
+        "description": "تحليل مفصل لرحلة العميل منذ أول تفاعل مع خدمتك حتى النهاية.",
+        "stages_showcase": {
+          "stage_1": {
+            "title": "التذاكر",
+            "percentage": "78",
+            "emoji": "star-struck"
+          },
+          "stage_2": {
+            "title": "مواقف السيارات",
+            "percentage": "39",
+            "emoji": "neutral-face"
+          },
+          "stage_3": {
+            "title": "الدخول",
+            "percentage": "71",
+            "emoji": "grinning-face"
+          },
+          "stage_4": {
+            "title": "المقاعد",
+            "percentage": "43",
+            "emoji": "confused-face"
+          },
+          "stage_5": {
+            "title": "المطعم",
+            "percentage": "86",
+            "emoji": "smiling-face-with-heart-eyes"
+          },
+          "stage_6": {
+            "title": "المرافق عامة",
+            "percentage": "20",
+            "emoji": "confounded-face"
+          }
+        }
       },
       "features": {
         "headline": "ميزات قوية لنتائج واقعية",

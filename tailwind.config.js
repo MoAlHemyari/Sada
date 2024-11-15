@@ -23,8 +23,9 @@ export default {
         3: "#1C4FB5", // 220 73% 41%
         4: "#456FC2", // 219.84 50.61% 51.57%
         5: "#9DB3DF", // 220 51% 75%
-        6: "#E0E9FA", // 219 72% 93%
-        7: "#F2F4FF", // 231 100% 97%
+        6: "#BAC8FF",
+        7: "#E0E9FA", // 219 72% 93%
+        8: "#F2F4FF", // 231 100% 97%
       },
       grey: {
         DEFAULT: "#808080",
@@ -34,6 +35,7 @@ export default {
       white: "#FAFBFF",
       green: "#4ABC64",
       red: "#FF0000",
+      orange: "#F8571C",
     },
     container: {
       center: "true",

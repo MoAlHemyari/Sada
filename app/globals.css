@@ -95,7 +95,7 @@
     @apply sticky top-0 z-50 shadow-md;
   }
   .scrolled-header nav {
-    @apply py-1;
+    @apply tablet:py-1 py-2;
   }
   .container {
     @apply py-9;
@@ -103,7 +103,7 @@
   }
 
   /* Set up scroll snap */
-html, body {
+html {
   scroll-behavior: smooth;
 }
 body {

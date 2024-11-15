@@ -122,7 +122,39 @@
     "sections": {
       "services": {
         "headline": "Complete Analysis of User Journey",
-        "description": "Detailed analysis of the customer journey, from the first interaction with your service to the last one."
+        "description": "Detailed analysis of the customer journey, from the first interaction with your service to the last one.",
+        "stages_showcase": {
+          "stage_1": {
+            "title": "Tickets",
+            "percentage": "78",
+            "emoji": "star-struck"
+          },
+          "stage_2": {
+            "title": "Parking",
+            "percentage": "39",
+            "emoji": "neutral-face"
+          },
+          "stage_3": {
+            "title": "Check-in",
+            "percentage": "71",
+            "emoji": "grinning-face"
+          },
+          "stage_4": {
+            "title": "Seating",
+            "percentage": "43",
+            "emoji": "confused-face"
+          },
+          "stage_5": {
+            "title": "Restaurant",
+            "percentage": "86",
+            "emoji": "smiling-face-with-heart-eyes"
+          },
+          "stage_6": {
+            "title": "Facilities",
+            "percentage": "20",
+            "emoji": "confounded-face"
+          }
+        }
       },
       "features": {
         "headline": "Powerful Features for Real Results",

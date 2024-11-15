@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-export default function Emoji({ name, alt = '', size = 32 }) {
+export default function Emoji({ name, size = 32, alt = '' }) {
   return (
     <Image
       src={`/image/emoji/${name}.webp`} 
