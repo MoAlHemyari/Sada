@@ -17,12 +17,10 @@ export default async function Home({ params }) {
 
   return (
     <>
-      <FadeIn delay={500}>
-      <HeaderSection dict={dict} lang={lang} />
+      <FadeIn delay={1000}>
+        <HeaderSection dict={dict} lang={lang} />
       </FadeIn>
-      <FadeIn>
-        <HeroSection dict={dict} lang={lang} />
-      </FadeIn>
+      <HeroSection dict={dict} lang={lang} />
       <FadeIn delay={1000}>
         <StatisticsSection dict={dict} lang={lang} />
       </FadeIn>

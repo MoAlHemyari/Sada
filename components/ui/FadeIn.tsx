@@ -32,9 +32,9 @@ const FadeIn: React.FC<FadeInProps> = ({
     if (!isVisible) {
       switch (direction) {
         case "tb":
-          return `translateY(${displacement}px)`;
-        case "bt":
           return `translateY(-${displacement}px)`;
+        case "bt":
+          return `translateY(${displacement}px)`;
         case "lr":
           return `translateX(-${displacement}px)`;
         case "rl":
