@@ -9,31 +9,42 @@ export default function HeroSection({ lang, dict }) {
   return (
     <main className="container">
       <div className="grid desktop:grid-cols-2 items-center gap-12 px-4">
-        <FadeIn delay={0} duration={1000}>
-          <div className="space-y-6 desktop:text-start text-center desktop:px-1 tablet:px-10">
-            <h1 className="desktop:text-5xl tablet:text-6xl text-4xl font-bold leading-tight">
+        <div className="space-y-6 desktop:text-start text-center desktop:px-1 tablet:px-10">
+          <h1 className="desktop:text-5xl tablet:text-6xl text-4xl font-bold leading-tight">
+            <FadeIn displacement={5} duration={1000} direction="tb">
               {dict.headline}
-            </h1>
+            </FadeIn>
+          </h1>
+          <FadeIn displacement={5} duration={1000} direction="tb">
             <p>{dict.subheadline}</p>
-            <div className="flex desktop:justify-start justify-center flex-row gap-4">
-              <Link href="/contact">
-                <Button>{dict.cta_button}</Button>
-              </Link>
-              <Link href="/learn-more">
-                <Button variant="outline" className="text-blue-4">
-                  {dict.learn_more}{" "}
-                  {lang !== "ar" ? (
-                    <ArrowRight className="ml-2 h-4 w-4" />
-                  ) : (
-                    <ArrowLeft className="ml-2 h-4 w-4" />
-                  )}
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </FadeIn>
-
-        <FadeIn delay={1000}>
+          </FadeIn>
+          <FadeIn
+            delay={14000}
+            direction="bt"
+            displacement={25}
+            duration={1000}
+          >
+            <Link href="/contact">
+              <Button>{dict.cta_button}</Button>
+            </Link>
+            <Link href="/learn-more">
+              <Button variant="outline" className="text-blue-4">
+                {dict.learn_more}{" "}
+                {lang !== "ar" ? (
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                ) : (
+                  <ArrowLeft className="ml-2 h-4 w-4" />
+                )}
+              </Button>
+            </Link>
+          </FadeIn>
+        </div>
+        <FadeIn
+          displacement={10}
+          duration={14000}
+          direction="rl"
+          langDir={lang === "ar" ? "rtl" : "ltr"}
+        >
           <Image
             src="/image/showcase.webp"
             alt={dict.hero_image.DEFAULT}

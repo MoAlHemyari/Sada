@@ -15,6 +15,7 @@ interface FadeInProps {
   scale?: number, // Scale factor
   displacement?: number; // Distance to move in pixels
   once?: boolean; // Whether to animate only once
+  className?: string;
 }
 
 const FadeIn: React.FC<FadeInProps> = ({
@@ -27,6 +28,7 @@ const FadeIn: React.FC<FadeInProps> = ({
   scale = 1,
   displacement = 50,
   once = true,
+  className,
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
@@ -62,7 +64,7 @@ const FadeIn: React.FC<FadeInProps> = ({
           setIsVisible(false);
         }
       },
-      { threshold: 0.1 }
+      { threshold: 0.05 }
     );
 
     const current = ref.current;
@@ -80,7 +82,7 @@ const FadeIn: React.FC<FadeInProps> = ({
   };
 
   return (
-    <div ref={ref} style={styles} aria-hidden={!isVisible}>
+    <div ref={ref} style={styles} aria-hidden={!isVisible} className={className}>
       {children}
     </div>
   );

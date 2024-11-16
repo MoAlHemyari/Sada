@@ -1,3 +1,5 @@
+import FadeIn from "@/components/ui/FadeIn";
+
 export default function StatisticsSection({ dict, lang }) {
   dict = dict.statistics_section;
   return (
@@ -8,6 +10,7 @@ export default function StatisticsSection({ dict, lang }) {
             lang !== "ar" ? "tracking-tighter" : ""
           }`}
         >
+          <FadeIn displacement={5} duration={350} delay={100} direction="bt">
           <div>
             <h3
               className="text-3xl font-bold text-blue-1 animate-numbers"
@@ -21,6 +24,9 @@ export default function StatisticsSection({ dict, lang }) {
             </h3>
             <p>{dict.customers_surveyed.text}</p>
           </div>
+          </FadeIn>
+
+          <FadeIn displacement={5} duration={350} delay={2500} direction="bt">
           <div>
             <h3
               className="text-3xl font-bold text-blue-1 animate-numbers"
@@ -34,6 +40,8 @@ export default function StatisticsSection({ dict, lang }) {
             </h3>
             <p>{dict.issued_CX_reports.text}</p>
           </div>
+          </FadeIn>
+          <FadeIn displacement={5} duration={350} delay={4000} direction="bt">
           <div>
             <h3
               className="text-3xl font-bold text-blue-1 animate-numbers"
@@ -47,10 +55,13 @@ export default function StatisticsSection({ dict, lang }) {
             </h3>
             <p>{dict.enhanced_experiences.text}</p>
           </div>
+          </FadeIn>
         </div>
+        <FadeIn displacement={5} duration={1000} delay={8000}  direction="bt">
         <p className="hidden tablet:block text-blue-1 font-semibold text-1xl">
           {dict.description}
         </p>
+        </FadeIn>
       </div>
     </section>
   );
