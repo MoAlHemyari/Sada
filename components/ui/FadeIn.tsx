@@ -1,10 +1,12 @@
 "use client";
 
+import { DEFAULT_RUNTIME_WEBPACK } from "next/dist/shared/lib/constants";
 import React, { useRef, useEffect, useState } from "react";
 
 type Direction = "tb" | "bt" | "lr" | "rl" | "center";
 
 interface FadeInProps {
+  langDir?: "ltr" | "rtl";
   children: React.ReactNode;
   duration?: number; // Animation duration in milliseconds
   delay?: number; // Delay before animation starts
@@ -16,6 +18,7 @@ interface FadeInProps {
 }
 
 const FadeIn: React.FC<FadeInProps> = ({
+  langDir = "ltr",
   children,
   duration = 1000,
   delay = 0,
@@ -27,6 +30,8 @@ const FadeIn: React.FC<FadeInProps> = ({
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+
+  direction = langDir === "rtl" ? (direction === "lr" ? "rl" : "lr") : direction;
 
   const getTransform = (): string => {
     if (!isVisible) {
