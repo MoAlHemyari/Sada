@@ -19,7 +19,7 @@ export default function HeroSection({ lang, dict }) {
             <p>{dict.subheadline}</p>
           </FadeIn>
           <FadeIn
-            delay={14000}
+            delay={13000}
             direction="bt"
             displacement={25}
             duration={1000}
@@ -41,7 +41,7 @@ export default function HeroSection({ lang, dict }) {
         </div>
         <FadeIn
           displacement={10}
-          duration={14000}
+          duration={13000}
           direction="rl"
           langDir={lang === "ar" ? "rtl" : "ltr"}
         >

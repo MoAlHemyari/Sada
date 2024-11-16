@@ -41,7 +41,7 @@ export default function StatisticsSection({ dict, lang }) {
             <p>{dict.issued_CX_reports.text}</p>
           </div>
           </FadeIn>
-          <FadeIn displacement={5} duration={350} delay={4000} direction="bt">
+          <FadeIn displacement={5} duration={350} delay={4500} direction="bt">
           <div>
             <h3
               className="text-3xl font-bold text-blue-1 animate-numbers"
