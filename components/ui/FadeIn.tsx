@@ -1,98 +1,84 @@
-'use client'
+"use client";
 
-import React, { useRef, useEffect, useState } from 'react'
-import { cn } from '@/lib/utils'
+import React, { useRef, useEffect, useState } from "react";
 
-type Direction = 'tb' | 'bt' | 'lr' | 'rl' | 'center'
-type Easing = 'ease-in' | 'ease-out' | 'ease-in-out' | 'linear'
+type Direction = "tb" | "bt" | "lr" | "rl" | "center";
 
 interface FadeInProps {
-  children: React.ReactNode
-  duration?: number
-  delay?: number
-  opacity?: boolean
-  direction?: Direction
-  displacement?: number
-  easing?: Easing
-  once?: boolean
+  children: React.ReactNode;
+  duration?: number; // Animation duration in milliseconds
+  delay?: number; // Delay before animation starts
+  opacity?: boolean; // Whether opacity animation is enabled
+  direction?: Direction; // Animation direction
+  scale?: number, // Scale factor
+  displacement?: number; // Distance to move in pixels
+  once?: boolean; // Whether to animate only once
 }
 
-const directionMap: Record<Direction, string[]> = {
-  tb: ['translate-y', '-translate-y'],
-  bt: ['-translate-y', 'translate-y'],
-  lr: ['translate-x', '-translate-x'],
-  rl: ['-translate-x', 'translate-x'],
-  center: ['scale', 'scale']
-}
-
-export default function FadeIn({
+const FadeIn: React.FC<FadeInProps> = ({
   children,
   duration = 1000,
   delay = 0,
   opacity = true,
-  direction = 'tb',
-  displacement = 10,
-  easing = 'ease-out',
-  once = true
-}: FadeInProps) {
-  const [isVisible, setIsVisible] = useState(false)
-  const [hasAnimated, setHasAnimated] = useState(false)
-  const ref = useRef<HTMLDivElement>(null)
+  direction = "center",
+  scale = 1,
+  displacement = 50,
+  once = true,
+}) => {
+  const [isVisible, setIsVisible] = useState(false);
+  const ref = useRef<HTMLDivElement>(null);
+
+  const getTransform = (): string => {
+    if (!isVisible) {
+      switch (direction) {
+        case "tb":
+          return `translateY(${displacement}px)`;
+        case "bt":
+          return `translateY(-${displacement}px)`;
+        case "lr":
+          return `translateX(-${displacement}px)`;
+        case "rl":
+          return `translateX(${displacement}px)`;
+        case "center":
+          return `scale(${scale})`;
+        default:
+          return "";
+      }
+    }
+    return "translate(0, 0) scale(1)";
+  };
 
   useEffect(() => {
     const observer = new IntersectionObserver(
       ([entry]) => {
-        if (entry.isIntersecting && (!once || !hasAnimated)) {
-          setIsVisible(true)
-          if (once) setHasAnimated(true)
+        if (entry.isIntersecting) {
+          setIsVisible(true);
         } else if (!once) {
-          setIsVisible(false)
+          setIsVisible(false);
         }
       },
       { threshold: 0.1 }
-    )
+    );
 
-    const currentRef = ref.current
-    if (currentRef) {
-      observer.observe(currentRef)
-    }
+    const current = ref.current;
+    if (current) observer.observe(current);
 
     return () => {
-      if (currentRef) {
-        observer.unobserve(currentRef)
-      }
-    }
-  }, [once, hasAnimated])
+      if (current) observer.unobserve(current);
+    };
+  }, [once]);
 
-  const [initialClass, visibleClass] = directionMap[direction]
-
-  const animationClasses = cn(
-    'transition-all will-change-transform',
-    isVisible ? 'visible' : 'invisible',
-    opacity && (isVisible ? 'opacity-100' : 'opacity-0'),
-    direction === 'center'
-      ? isVisible
-        ? 'scale-100'
-        : `scale-${100 - Math.abs(displacement)}`
-      : isVisible
-      ? visibleClass
-      : `${initialClass}-${displacement}`,
-    easing
-  )
-
-  const inlineStyles = {
-    transitionDuration: `${duration}ms`,
-    transitionDelay: `${delay}ms`
-  }
+  const styles = {
+    transition: `all ${duration}ms ease-out ${delay}ms`,
+    opacity: isVisible || !opacity ? 1 : 0,
+    transform: getTransform(),
+  };
 
   return (
-    <div
-      ref={ref}
-      className={animationClasses}
-      style={inlineStyles}
-      aria-hidden={!isVisible}
-    >
+    <div ref={ref} style={styles} aria-hidden={!isVisible}>
       {children}
     </div>
-  )
-}
+  );
+};
+
+export default FadeIn;

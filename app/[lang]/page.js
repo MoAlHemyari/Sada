@@ -17,18 +17,34 @@ export default async function Home({ params }) {
 
   return (
     <>
+      <FadeIn delay={500}>
       <HeaderSection dict={dict} lang={lang} />
-      <FadeIn direction="lr" duration={1000} delay={1000} displacement={10} opacity={true}>
+      </FadeIn>
+      <FadeIn>
         <HeroSection dict={dict} lang={lang} />
       </FadeIn>
-      <StatisticsSection dict={dict} lang={lang} />
-      <AboutSection dict={dict} />
-      <ClientsSection dict={dict} lang={lang} />
-      <ServiceSection dict={dict} lang={lang} />
-      <ToolsSection dict={dict} lang={lang} />
+      <FadeIn delay={1000}>
+        <StatisticsSection dict={dict} lang={lang} />
+      </FadeIn>
+      <FadeIn delay={1500}>
+        <AboutSection dict={dict} />
+      </FadeIn>
+      <FadeIn delay={2000}>
+        <ClientsSection dict={dict} lang={lang} />
+      </FadeIn>
+      <FadeIn delay={500}>
+        <ServiceSection dict={dict} lang={lang} />
+      </FadeIn>
+      <FadeIn delay={500}>
+        <ToolsSection dict={dict} lang={lang} />
+      </FadeIn>
       <div className="bg-gradient-to-t from-blue-6 to-white">
-        <CTASection dict={dict} lang={lang} />
-        <FooterSection dict={dict} lang={lang} />
+        <FadeIn delay={500}>
+          <CTASection dict={dict} lang={lang} />
+        </FadeIn>
+        <FadeIn delay={500}>
+          <FooterSection dict={dict} lang={lang} />
+        </FadeIn>
       </div>
       <ClientSideFunctions />
     </>
