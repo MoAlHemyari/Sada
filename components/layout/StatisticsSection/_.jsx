@@ -1,5 +1,3 @@
-import FadeInEffect from "@/components/ui/FadeIn";
-
 export default function StatisticsSection({ dict, lang }) {
   dict = dict.statistics_section;
   return (

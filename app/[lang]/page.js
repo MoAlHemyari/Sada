@@ -30,17 +30,17 @@ export default async function Home({ params }) {
       <FadeIn delay={2000}>
         <ClientsSection dict={dict} lang={lang} />
       </FadeIn>
-      <FadeIn delay={500}>
+      <FadeIn delay={250}>
         <ServiceSection dict={dict} lang={lang} />
       </FadeIn>
-      <FadeIn delay={500}>
+      <FadeIn delay={250}>
         <ToolsSection dict={dict} lang={lang} />
       </FadeIn>
       <div className="bg-gradient-to-t from-blue-6 to-white">
-        <FadeIn delay={500}>
+        <FadeIn delay={250}>
           <CTASection dict={dict} lang={lang} />
         </FadeIn>
-        <FadeIn delay={500}>
+        <FadeIn delay={250}>
           <FooterSection dict={dict} lang={lang} />
         </FadeIn>
       </div>
