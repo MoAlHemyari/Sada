@@ -9,6 +9,7 @@ import ToolsSection from "@/components/layout/ToolsSection/_";
 import FooterSection from "@/components/layout/FooterSection/_";
 import CTASection from "@/components/layout/CTASection/_";
 import ClientSideFunctions from "@/components/layout/ClientSideFunctions";
+import FadeIn from "@/components/ui/FadeIn";
 
 export default async function Home({ params }) {
   const { lang } = await params;
@@ -17,7 +18,9 @@ export default async function Home({ params }) {
   return (
     <>
       <HeaderSection dict={dict} lang={lang} />
-      <HeroSection dict={dict} lang={lang} />
+      <FadeIn direction="lr" duration={1000} delay={1000} displacement={10} opacity={true}>
+        <HeroSection dict={dict} lang={lang} />
+      </FadeIn>
       <StatisticsSection dict={dict} lang={lang} />
       <AboutSection dict={dict} />
       <ClientsSection dict={dict} lang={lang} />

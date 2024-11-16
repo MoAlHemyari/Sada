@@ -13,15 +13,18 @@ export default function HeaderSection({ lang, dict }) {
     <header>
       <nav className="container flex items-center justify-between">
         <div className="flex gap-12 text-sm items-center">
-          <Link href={`/${lang}`} className="flex items-center space-x-2">
+        <div className="flex items-center space-x-2 w-[77px] relative">
+        <Link href={`/${lang}`} className="flex items-center space-x-2">
             <Image
               src="/image/logo/sada.webp"
               alt={dict.logo.alt}
               width={60}
               height={26}
               className="h-5 w-auto blue-filter-img"
+              unoptimized
             />
           </Link>
+          </div>
           <DesktopNavigation lang={lang} dict={dict} />
         </div>
 

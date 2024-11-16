@@ -52,13 +52,13 @@
     @apply max-w-[80rem] mx-auto;
   }
   .shrinked-width-70 {
-    @apply desktop:max-w-[70rem] mx-auto;
+    @apply max-w-[70rem] mx-auto;
   }
   .shrinked-width-50 {
-    @apply desktop:max-w-[50rem] mx-auto;
+    @apply max-w-[50rem] mx-auto;
   }
   .shrinked-height-40 {
-    @apply desktop:h-[40rem];
+    @apply h-[40rem];
   }
   .headline-wrapper {
     @apply flex flex-col gap-2 text-center items-center mx-auto max-w-[30rem] py-10;

@@ -12,7 +12,7 @@ export default function ServicesSection({ dict, lang }) {
                 <h3 className="sub-headline">{dict.subheadline}</h3>
             </div>
 
-            <Showcase />
+            <Showcase lang={lang} />
 
             <Service dict={dict} lang={lang} />
             <Features dict={dict} />

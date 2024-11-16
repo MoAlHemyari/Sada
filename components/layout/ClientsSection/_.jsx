@@ -12,21 +12,9 @@ export default function ClientsSection({ dict, lang }) {
       </div>
       <div className="grid grid-cols-2 justify-center gap-y-6 tablet:grid-cols-3 tablet:[&>*:last-child]:col-span-3 desktop:grid-cols-5 desktop:[&>*:last-child]:col-span-1">
         {Object.values(clients).map((client) => (
-          <div
-            key={client.src}
-            className="flex items-center justify-center"
-            // className={`grid w-max ${
-            //   index === Object.values(clients).length - 1
-            //     ? "tablet:last:col-span-3 desktop:last:col-span-1 tablet:justify-self-center"
-            //     : ""
-            // } ${
-            //   index % 2 === 0
-            //     ? "tablet:justify-self-center justify-self-start"
-            //     : "tablet:justify-self-center justify-self-end"
-            // }`}
-          >
+          <div key={client.src} className="flex items-center justify-center">
             <Image
-              src={`./image/logo/${client.src}.svg`}
+              src={`/image/logo/${client.src}.webp`}
               alt={`${lang === "ar" ? "شعار " : ""}${client.alt}${
                 lang === "en" ? " Logo" : ""
               }`}
@@ -34,6 +22,7 @@ export default function ClientsSection({ dict, lang }) {
               height={32}
               className="h-20 w-auto undraggable"
               draggable={false}
+              unoptimized
             />
           </div>
         ))}

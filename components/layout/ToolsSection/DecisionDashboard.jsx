@@ -12,9 +12,9 @@ export default function DecisionDashboard({ dict }) {
       </div>
 
       <Image
-        src="/image/tool/decision-dashboard.svg"
+        src="/image/tool/decision-dashboard-tool.webp"
         alt={dict.image_alt}
-        className="undraggable shrinked-width-70"
+        className="undraggable w-auto mx-auto max-w-[70rem] max-h-[30rem]"
         width={1920}
         height={1080}
         draggable={false}

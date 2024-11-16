@@ -1,7 +1,7 @@
 "use client";
 import { useState, useEffect, useRef } from "react";
 
-export default function PopUpEffect({ children }, duration = 1000) {
+export default function PopUpEffect({ children}) {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef(null);
 
@@ -29,7 +29,7 @@ export default function PopUpEffect({ children }, duration = 1000) {
   return (
     <div
       ref={ref}
-      className={`transition-all duration-${duration} ease-out transform ${
+      className={`transition-all duration-150 ease-out transform ${
         isVisible ? "opacity-100 scale-100" : "opacity-0 scale-75"
       }`}
     >

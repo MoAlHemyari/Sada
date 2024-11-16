@@ -28,23 +28,34 @@ export default function SurveyTool({ dict, lang }) {
           value={view}
           dir={lang === "ar" ? "rtl" : "ltr"}
         >
-          <ToggleGroupItem onClick={() => setView(switcher.kiosk.src)} value={switcher.kiosk.src} aria-label={switcher.kiosk.name}>
+          <ToggleGroupItem
+            onClick={() => setView(switcher.kiosk.src)}
+            value={switcher.kiosk.src}
+            aria-label={switcher.kiosk.name}
+          >
             {switcher.kiosk.name}
           </ToggleGroupItem>
-          <ToggleGroupItem onClick={() => setView(switcher.tablet.src)} value={switcher.tablet.src} aria-label={switcher.tablet.name}>
+          <ToggleGroupItem
+            onClick={() => setView(switcher.tablet.src)}
+            value={switcher.tablet.src}
+            aria-label={switcher.tablet.name}
+          >
             {switcher.tablet.name}
           </ToggleGroupItem>
         </ToggleGroup>
 
         {/* Display Image Based on View */}
         <Image
-          src={`/image/tool/survrey-tool-${switcher[view].src}.svg`}
+          src={`/image/tool/survrey-tool-${switcher[view].src}.webp`}
           alt={`${dict.image_alt}${lang !== "ar" ? " " : ""}${view.name}`}
-          className="undraggable shrinked-width-70 desktop:h-[40rem] tablet:h-[30rem] wideMobiles:h-[20rem] h-[16rem]" // h-[40rem] to match the height of the viewed images
+          className="undraggable w-auto mx-auto max-w-[70rem] max-h-[30rem]" // shrinked to the tools container height
           width={1920}
           height={1080}
           draggable={false}
         />
+        <div className="tools-container">
+          {/* other content here */}
+        </div>
       </div>
     </div>
   );

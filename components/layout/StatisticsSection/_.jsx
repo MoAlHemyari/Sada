@@ -1,8 +1,7 @@
-import FadeInEffect from "@/components/ui/FadeInEffect";
+import FadeInEffect from "@/components/ui/FadeIn";
 
 export default function StatisticsSection({ dict, lang }) {
   dict = dict.statistics_section;
-
   return (
     <section className="container border-y border-blue-6 py-5 will-scrolling-after">
       <div className="grid grid-cols-1 tablet:grid-cols-2 gap-8 items-center">
@@ -12,21 +11,29 @@ export default function StatisticsSection({ dict, lang }) {
           }`}
         >
           <div>
-            <h3 className="text-3xl font-bold text-blue-1 animate-numbers" data-target={dict.customers_surveyed.num.num}
-                data-prefix="+"
-                data-suffix={`${lang === "ar" ? " " : ""}${
-                  dict.customers_surveyed.num.suffix
-                }`}>
-            0</h3>
+            <h3
+              className="text-3xl font-bold text-blue-1 animate-numbers"
+              data-target={dict.customers_surveyed.num.num}
+              data-prefix="+"
+              data-suffix={`${lang === "ar" ? " " : ""}${
+                dict.customers_surveyed.num.suffix
+              }`}
+            >
+              0
+            </h3>
             <p>{dict.customers_surveyed.text}</p>
           </div>
           <div>
-            <h3 className="text-3xl font-bold text-blue-1 animate-numbers" data-target={dict.issued_CX_reports.num.num}
-                data-prefix="+"
-                data-suffix={`${lang === "ar" ? " " : ""}${
-                  dict.issued_CX_reports.num.suffix
-                }`}>
-            0</h3>
+            <h3
+              className="text-3xl font-bold text-blue-1 animate-numbers"
+              data-target={dict.issued_CX_reports.num.num}
+              data-prefix="+"
+              data-suffix={`${lang === "ar" ? " " : ""}${
+                dict.issued_CX_reports.num.suffix
+              }`}
+            >
+              0
+            </h3>
             <p>{dict.issued_CX_reports.text}</p>
           </div>
           <div>
@@ -37,7 +44,9 @@ export default function StatisticsSection({ dict, lang }) {
               data-suffix={`${lang === "ar" ? " " : ""}${
                 dict.enhanced_experiences.num.suffix
               }`}
-            >0</h3>
+            >
+              0
+            </h3>
             <p>{dict.enhanced_experiences.text}</p>
           </div>
         </div>

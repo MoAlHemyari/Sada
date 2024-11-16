@@ -29,7 +29,7 @@ export default function About({ dict, lang }) {
         </div>
 
         {/* links */}
-        <nav className="flex flex-wrap justify-center gap-8 tablet:mb-0 mb-5">
+        <nav className="flex flex-wrap justify-center gap-x-8 gap-y-4 tablet:mb-0 mb-5">
           <Link
             key={links.about.name}
             href={`/${lang}/${links.about.link}`}
@@ -40,6 +40,7 @@ export default function About({ dict, lang }) {
           <Link
             key={links.contact.name}
             href={`/${lang}/${links.contact.link}`}
+            className="hidden tablet:flex"
           >
             {links.contact.name}
           </Link>
