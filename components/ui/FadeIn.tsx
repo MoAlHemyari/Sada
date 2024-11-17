@@ -2,7 +2,7 @@
 
 import { DEFAULT_RUNTIME_WEBPACK } from "next/dist/shared/lib/constants";
 import React, { useRef, useEffect, useState } from "react";
-import isFirstVisit from "@/components/isFirstVisit";
+import isFirstVisit from "@/components/IsFirstVisit";
 
 type Direction = "tb" | "bt" | "lr" | "rl" | "center";
 
