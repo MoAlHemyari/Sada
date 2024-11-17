@@ -11,14 +11,16 @@ export default function DecisionDashboard({ dict }) {
         <p>{dict.description}</p>
       </div>
 
+      <div className="h-56 tablet:h-auto">
       <Image
         src="/image/tool/decision-dashboard-tool.webp"
         alt={dict.image_alt}
-        className="undraggable w-auto mx-auto max-w-[70rem] max-h-[30rem]"
+        className="undraggable tablet:w-auto mx-auto tablet:max-h-[30rem]"
         width={1920}
         height={1080}
         draggable={false}
       />
+      </div> 
     </div>
   );
 }

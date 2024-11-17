@@ -19,10 +19,10 @@ export default function HeroSection({ lang, dict }) {
             <p>{dict.subheadline}</p>
           </FadeIn>
           <FadeIn
-            delay={13000}
             direction="bt"
             displacement={25}
             duration={1000}
+            className="flex gap-3 justify-center desktop:justify-start"
           >
             <Link href="/contact">
               <Button>{dict.cta_button}</Button>

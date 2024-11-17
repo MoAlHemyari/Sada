@@ -2,6 +2,7 @@
 
 import { DEFAULT_RUNTIME_WEBPACK } from "next/dist/shared/lib/constants";
 import React, { useRef, useEffect, useState } from "react";
+import isFirstVisit from "@/components/isFirstVisit";
 
 type Direction = "tb" | "bt" | "lr" | "rl" | "center";
 
@@ -32,6 +33,8 @@ const FadeIn: React.FC<FadeInProps> = ({
 }) => {
   const [isVisible, setIsVisible] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
+
+  const firstVisit = isFirstVisit();
 
   direction = langDir === "rtl" ? (direction === "lr" ? "rl" : "lr") : direction;
 
@@ -74,6 +77,9 @@ const FadeIn: React.FC<FadeInProps> = ({
       if (current) observer.unobserve(current);
     };
   }, [once]);
+
+  delay = firstVisit ? delay : Math.max(delay / 5, 300);
+  duration = firstVisit ? duration : Math.max(duration / 2, 400);
 
   const styles = {
     transition: `all ${duration}ms ease-out ${delay}ms`,

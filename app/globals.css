@@ -88,15 +88,6 @@
   .filter-blue-2:hover {
     filter: brightness(0) saturate(100%) invert(40%) sepia(41%) saturate(854%) hue-rotate(181deg) brightness(95%) contrast(89%);
   }
-  header {
-    @apply bg-white transition-all duration-500 ease-in-out;
-  }
-  .scrolled-header {
-    @apply sticky top-0 z-50 shadow-md;
-  }
-  .scrolled-header nav {
-    @apply tablet:py-1 py-2;
-  }
   .container {
     @apply py-9;
     /* desktop:px-16 tablet:px-24 px-4 py-8 text-center  */

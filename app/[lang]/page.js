@@ -17,18 +17,16 @@ export default async function Home({ params }) {
 
   return (
     <>
-    <FadeIn delay={13000} direction="tb" displacement={25} duration={1000}>
       <HeaderSection dict={dict} lang={lang} />
-    </FadeIn>
-    <FadeIn delay={11800} direction="bt" displacement={25} duration={1000}>
-      <HeroSection dict={dict} lang={lang} />
+      <FadeIn delay={11800} direction="bt" displacement={25} duration={1000}>
+        <HeroSection dict={dict} lang={lang} />
       </FadeIn>
       <StatisticsSection dict={dict} lang={lang} />
-      <FadeIn delay={13000} direction="bt" displacement={25}  duration={1000}>
-      <AboutSection dict={dict} />
-      <ClientsSection dict={dict} lang={lang} />
-      <ServiceSection dict={dict} lang={lang} />
-      <ToolsSection dict={dict} lang={lang} />
+      <FadeIn delay={13000} direction="bt" displacement={25} duration={1000}>
+        <AboutSection dict={dict} />
+        <ClientsSection dict={dict} lang={lang} />
+        <ServiceSection dict={dict} lang={lang} />
+        <ToolsSection dict={dict} lang={lang} />
       </FadeIn>
       <div className="bg-gradient-to-t from-blue-6 to-white">
         <CTASection dict={dict} lang={lang} />

@@ -45,16 +45,15 @@ export default function SurveyTool({ dict, lang }) {
         </ToggleGroup>
 
         {/* Display Image Based on View */}
-        <Image
-          src={`/image/tool/survrey-tool-${switcher[view].src}.webp`}
-          alt={`${dict.image_alt}${lang !== "ar" ? " " : ""}${view.name}`}
-          className="undraggable w-auto mx-auto max-w-[70rem] max-h-[30rem]" // shrinked to the tools container height
-          width={1920}
-          height={1080}
-          draggable={false}
-        />
-        <div className="tools-container">
-          {/* other content here */}
+        <div className="h-56 tablet:h-auto">
+          <Image
+            src={`/image/tool/survrey-tool-${switcher[view].src}.webp`}
+            alt={`${dict.image_alt}${lang !== "ar" ? " " : ""}${view.name}`}
+            className="undraggable tablet:w-auto mx-auto tablet:max-h-[30rem]"
+            width={1920}
+            height={1080}
+            draggable={false}
+          />
         </div>
       </div>
     </div>
