@@ -1,6 +1,6 @@
 import React, { useEffect } from "react";
 
-export default function isFirstVisit() {
+export default function IsFirstVisit() {
   let isFirstVisit;
 
   useEffect(() => {
