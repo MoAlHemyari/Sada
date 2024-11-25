@@ -5,7 +5,8 @@ import Image from "next/image"
 import Link from "next/link"
 import DesktopNavigation from "@/components/layout/HeaderSection/DesktopNavigation"
 import MobileNavigation from "@/components/layout/HeaderSection/MobileNavigation"
-import { useState, useEffect } from 'react'
+import { useState, useEffect } from "react"
+import FadeIn from "@/components/ui/FadeIn"
 
 const Logo = ({ lang, alt }) => (
   <div className="flex items-center space-x-2 w-[77px] relative">
@@ -51,14 +52,18 @@ export default function HeaderSection({ lang, dict }) {
   return (
     <header className={`sticky top-0 z-50 transition-all duration-400 bg-white backdrop-blur-sm py-3 ${isScrolled ? 'shadow-sm' : 'bg-transparent'}`}>
       <nav className="container flex items-center justify-between py-0">
-        <div className="flex gap-12 text-sm items-center">
-          <Logo lang={lang} alt={headerDict.logo.alt} />
-          <DesktopNavigation lang={lang} dict={headerDict} />
-        </div>
+        <FadeIn delay={300} duration={750} when="load">
+          <div className="flex gap-12 text-sm items-center">
+            <Logo lang={lang} alt={headerDict.logo.alt} />
+            <DesktopNavigation lang={lang} dict={headerDict} />
+          </div>
 
-        <DesktopSpecialNav lang={lang} bookDemoText={headerDict.navbar.book_demo} />
-        <MobileNavigation lang={lang} dict={headerDict} />
+        </FadeIn>
+        <FadeIn delay={300} duration={750} when="load">
+          <DesktopSpecialNav lang={lang} bookDemoText={headerDict.navbar.book_demo} />
+          <MobileNavigation lang={lang} dict={headerDict} />
+        </FadeIn>
       </nav>
-    </header >
+    </header>
   )
 }
