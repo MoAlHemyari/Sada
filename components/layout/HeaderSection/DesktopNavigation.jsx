@@ -16,28 +16,28 @@ export default function DesktopNavigation({ lang, dict }) {
     <NavigationMenu dir={lang === "ar" ? "rtl" : "ltr"} className="hidden tablet:flex">
       <NavigationMenuList>
         <NavigationMenuItem className="hidden desktop:flex">
-          <Link href={`/${lang}/#about`} legacyBehavior passHref>
+          <Link href={`#about`} legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               {dict.navbar.about}
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
         <NavigationMenuItem>
-          <Link href={`/${lang}/#features`} legacyBehavior passHref>
+          <Link href={`#features`} legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               {dict.navbar.features}
             </NavigationMenuLink>
           </Link>
         </NavigationMenuItem>
-        <NavigationMenuItem>
+        {/* <NavigationMenuItem>
           <Link href={`/${lang}/#`} legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               {dict.navbar.pricing}
             </NavigationMenuLink>
           </Link>
-        </NavigationMenuItem>
+        </NavigationMenuItem> */}
         <NavigationMenuItem>
-          <Link href={`/${lang}/#`} legacyBehavior passHref>
+          <Link href={`https://43us9n0vsgt.typeform.com/to/SoDXgTpg`} legacyBehavior passHref>
             <NavigationMenuLink className={navigationMenuTriggerStyle()}>
               {dict.navbar.careers}
             </NavigationMenuLink>

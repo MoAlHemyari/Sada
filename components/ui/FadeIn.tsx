@@ -1,10 +1,8 @@
 "use client";
-
-import { DEFAULT_RUNTIME_WEBPACK } from "next/dist/shared/lib/constants";
 import React, { useRef, useEffect, useState } from "react";
-import isFirstVisit from "@/components/IsFirstVisit";
 
 type Direction = "tb" | "bt" | "lr" | "rl" | "center";
+type TriggerType = "load" | "scroll";
 
 interface FadeInProps {
   langDir?: "ltr" | "rtl";
@@ -13,33 +11,34 @@ interface FadeInProps {
   delay?: number; // Delay before animation starts
   opacity?: boolean; // Whether opacity animation is enabled
   direction?: Direction; // Animation direction
-  scale?: number, // Scale factor
+  scale?: number; // Scale factor
   displacement?: number; // Distance to move in pixels
   once?: boolean; // Whether to animate only once
   className?: string;
+  when?: TriggerType; // When to trigger the animation
 }
 
 const FadeIn: React.FC<FadeInProps> = ({
   langDir = "ltr",
   children,
-  duration = 1000,
+  duration = 300,
   delay = 0,
   opacity = true,
   direction = "center",
   scale = 1,
-  displacement = 50,
+  displacement = 5,
   once = true,
   className,
+  when = "scroll",
 }) => {
   const [isVisible, setIsVisible] = useState(false);
+  const [isLoaded, setIsLoaded] = useState(false);
   const ref = useRef<HTMLDivElement>(null);
-
-  const firstVisit = isFirstVisit();
 
   direction = langDir === "rtl" ? (direction === "lr" ? "rl" : "lr") : direction;
 
   const getTransform = (): string => {
-    if (!isVisible) {
+    if (!(when === "load" ? isLoaded : isVisible)) {
       switch (direction) {
         case "tb":
           return `translateY(-${displacement}px)`;
@@ -59,36 +58,46 @@ const FadeIn: React.FC<FadeInProps> = ({
   };
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        if (entry.isIntersecting) {
-          setIsVisible(true);
-        } else if (!once) {
-          setIsVisible(false);
-        }
-      },
-      { threshold: 0.05 }
-    );
+    if (when === "load") {
+      // Add a minimal delay to ensure the initial state is rendered
+      const timer = setTimeout(() => {
+        setIsLoaded(true);
+      }, 10);
+      return () => clearTimeout(timer);
+    } else {
+      const observer = new IntersectionObserver(
+        ([entry]) => {
+          if (entry.isIntersecting) {
+            setIsVisible(true);
+          } else if (!once) {
+            setIsVisible(false);
+          }
+        },
+        { threshold: 0.05 }
+      );
 
-    const current = ref.current;
-    if (current) observer.observe(current);
+      const current = ref.current;
+      if (current) observer.observe(current);
 
-    return () => {
-      if (current) observer.unobserve(current);
-    };
-  }, [once]);
-
-  delay = firstVisit ? delay : Math.max(delay / 5, 300);
-  duration = firstVisit ? duration : Math.max(duration / 2, 400);
+      return () => {
+        if (current) observer.unobserve(current);
+      };
+    }
+  }, [once, when]);
 
   const styles = {
     transition: `all ${duration}ms ease-out ${delay}ms`,
-    opacity: isVisible || !opacity ? 1 : 0,
+    opacity: (when === "load" ? isLoaded : isVisible) || !opacity ? 1 : 0,
     transform: getTransform(),
   };
 
   return (
-    <div ref={ref} style={styles} aria-hidden={!isVisible} className={className}>
+    <div
+      ref={ref}
+      style={styles}
+      aria-hidden={!(when === "load" ? isLoaded : isVisible)}
+      className={className}
+    >
       {children}
     </div>
   );

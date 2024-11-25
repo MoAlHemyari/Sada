@@ -6,61 +6,50 @@ export default function StatisticsSection({ dict, lang }) {
     <section className="container border-y border-blue-6 py-5">
       <div className="grid grid-cols-1 tablet:grid-cols-2 tablet:gap-8 items-center">
         <div
-          className={`grid grid-cols-3 gap-2 text-center tablet:text-start [&_h3]:${
-            lang !== "ar" ? "tracking-tighter" : ""
-          }`}
+          className={`grid grid-cols-3 gap-2 text-center tablet:text-start [&_h3]:${lang !== "ar" ? "tracking-tighter" : ""
+            }`}
         >
-          
-          <FadeIn displacement={5} duration={350} delay={100} direction="bt">
-          <div> {/* don't remove this div, will broke animatio */}
+          <div> {/* this is the animation wrapper. removing it will brake the animation */}
             <h3
               className="text-3xl font-bold text-blue-1 animate-numbers"
               data-target={dict.customers_surveyed.num.num}
               data-prefix="+"
-              data-suffix={`${lang === "ar" ? " " : ""}${
-                dict.customers_surveyed.num.suffix
-              }`}
+              data-suffix={`${lang === "ar" ? " " : ""}${dict.customers_surveyed.num.suffix
+                }`}
             >
               0
             </h3>
             <p>{dict.customers_surveyed.text}</p>
           </div>
-          </FadeIn>
 
-          <FadeIn displacement={5} duration={350} delay={2500} direction="bt">
-          <div> {/* don't remove this div, will broke animatio */}
+          <div> {/* this is the animation wrapper. removing it will brake the animation */}
             <h3
               className="text-3xl font-bold text-blue-1 animate-numbers"
               data-target={dict.issued_CX_reports.num.num}
               data-prefix="+"
-              data-suffix={`${lang === "ar" ? " " : ""}${
-                dict.issued_CX_reports.num.suffix
-              }`}
+              data-suffix={`${lang === "ar" ? " " : ""}${dict.issued_CX_reports.num.suffix
+                }`}
             >
               0
             </h3>
             <p>{dict.issued_CX_reports.text}</p>
           </div>
-          </FadeIn>
 
-          <FadeIn displacement={5} duration={350} delay={4500} direction="bt">
-          <div> {/* don't remove this div, will broke animatio */}
+          <div> {/* this is the animation wrapper. removing it will brake the animation */}
             <h3
               className="text-3xl font-bold text-blue-1 animate-numbers"
               data-target={dict.enhanced_experiences.num.num}
               data-prefix="+"
-              data-suffix={`${lang === "ar" ? " " : ""}${
-                dict.enhanced_experiences.num.suffix
-              }`}
+              data-suffix={`${lang === "ar" ? " " : ""}${dict.enhanced_experiences.num.suffix
+                }`}
             >
               0
             </h3>
             <p>{dict.enhanced_experiences.text}</p>
           </div>
-          </FadeIn>
         </div>
 
-        <FadeIn displacement={5} duration={1000} delay={8000}  direction="bt">
+        <FadeIn delay={1000} duration={700} displacement={5} direction="bt" when="load">
           <p className="hidden invisible tablet:visible tablet:block text-blue-1 font-semibold text-1xl">
             {dict.description}
           </p>

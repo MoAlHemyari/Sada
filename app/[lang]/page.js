@@ -8,8 +8,8 @@ import ServiceSection from "@/components/layout/ServiceSection/_";
 import ToolsSection from "@/components/layout/ToolsSection/_";
 import FooterSection from "@/components/layout/FooterSection/_";
 import CTASection from "@/components/layout/CTASection/_";
-import ClientSideFunctions from "@/components/layout/ClientSideFunctions";
-import FadeIn from "@/components/ui/FadeIn";
+import ClientSideFunctions from "@/components/ClientSideFunctions";
+import FadeIn from "@/components/ui/FadeIn"
 
 export default async function Home({ params }) {
   const { lang } = await params;
@@ -17,12 +17,16 @@ export default async function Home({ params }) {
 
   return (
     <>
-      <HeaderSection dict={dict} lang={lang} />
-      <FadeIn delay={11800} direction="bt" displacement={25} duration={1000}>
+      <FadeIn delay={300} duration={750} when="load">
+        <HeaderSection dict={dict} lang={lang} />
+      </FadeIn>
+      <FadeIn duration={500}>
         <HeroSection dict={dict} lang={lang} />
       </FadeIn>
-      <StatisticsSection dict={dict} lang={lang} />
-      <FadeIn delay={13000} direction="bt" displacement={25} duration={1000}>
+      <FadeIn delay={300} duration={700} when="load">
+        <StatisticsSection dict={dict} lang={lang} />
+      </FadeIn>
+      <FadeIn delay={2000} when="load">
         <AboutSection dict={dict} />
         <ClientsSection dict={dict} lang={lang} />
         <ServiceSection dict={dict} lang={lang} />

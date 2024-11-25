@@ -11,7 +11,7 @@ export default function ToolsSection({ dict, lang }) {
         <h3 className="sub-headline">{dict.subheadline}</h3>
       </div>
 
-      <Showcase />
+      <Showcase lang={lang} />
 
       <SurveyTool dict={dict} lang={lang} />
       <DecisionDashboard dict={dict} />

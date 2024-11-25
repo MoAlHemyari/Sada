@@ -15,9 +15,8 @@ export default function ClientsSection({ dict, lang }) {
           <div key={client.src} className="flex items-center justify-center">
             <Image
               src={`/image/logo/${client.src}.webp`}
-              alt={`${lang === "ar" ? "شعار " : ""}${client.alt}${
-                lang === "en" ? " Logo" : ""
-              }`}
+              alt={`${lang === "ar" ? "شعار " : ""}${client.alt}${lang === "en" ? " Logo" : ""
+                }`}
               width={80}
               height={32}
               className="h-20 w-auto undraggable"

@@ -1,12 +1,10 @@
 'use client'
-
 import { Button } from "@/components/ui/button"
 import LanguageSwitcher from "@/components/component/LanguageSwitcher"
 import Image from "next/image"
 import Link from "next/link"
 import DesktopNavigation from "@/components/layout/HeaderSection/DesktopNavigation"
 import MobileNavigation from "@/components/layout/HeaderSection/MobileNavigation"
-import FadeIn from "@/components/ui/FadeIn"
 import { useState, useEffect } from 'react'
 
 const Logo = ({ lang, alt }) => (
@@ -25,11 +23,13 @@ const Logo = ({ lang, alt }) => (
   </div>
 )
 
-const DesktopActions = ({ lang, bookDemoText }) => (
+const DesktopSpecialNav = ({ lang, bookDemoText }) => (
   <div className="hidden tablet:flex items-center gap-4">
-    <Button variant="outline">{bookDemoText}</Button>
+    <Link href={`https://43us9n0vsgt.typeform.com/to/QDGWxlgl`}>
+      <Button variant="outline">{bookDemoText}</Button>
+    </Link>
     <LanguageSwitcher lang={lang} className="button rounded-sm" />
-    {/* Uncomment the following line if you want to include the theme toggle */}
+    {/* theme colors has to setted up before enabling theme toggle */}
     {/* <ThemeToggle /> */}
   </div>
 )
@@ -50,18 +50,15 @@ export default function HeaderSection({ lang, dict }) {
 
   return (
     <header className={`sticky top-0 z-50 transition-all duration-400 bg-white backdrop-blur-sm py-3 ${isScrolled ? 'shadow-sm' : 'bg-transparent'}`}>
-      <FadeIn delay={1000} direction="tb" displacement={25} duration={1000}>
-        <nav className="container flex items-center justify-between py-0">
-          <div className="flex gap-12 text-sm items-center">
-            <Logo lang={lang} alt={headerDict.logo.alt} />
-            <DesktopNavigation lang={lang} dict={headerDict} />
-          </div>
+      <nav className="container flex items-center justify-between py-0">
+        <div className="flex gap-12 text-sm items-center">
+          <Logo lang={lang} alt={headerDict.logo.alt} />
+          <DesktopNavigation lang={lang} dict={headerDict} />
+        </div>
 
-          <DesktopActions lang={lang} bookDemoText={headerDict.navbar.book_demo} />
-
-          <MobileNavigation lang={lang} dict={headerDict} />
-        </nav>
-      </FadeIn>
-    </header>
+        <DesktopSpecialNav lang={lang} bookDemoText={headerDict.navbar.book_demo} />
+        <MobileNavigation lang={lang} dict={headerDict} />
+      </nav>
+    </header >
   )
 }

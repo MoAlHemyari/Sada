@@ -2,32 +2,22 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { ArrowRight, ArrowLeft } from "lucide-react";
 import Link from "next/link";
-import FadeIn from "@/components/ui/FadeIn";
 
 export default function HeroSection({ lang, dict }) {
   dict = dict.hero_section;
   return (
     <main className="container">
       <div className="grid desktop:grid-cols-2 items-center gap-12 px-4">
-        <div className="space-y-6 desktop:text-start text-center desktop:px-1 tablet:px-10">
+        <div className="space-y-6 desktop:text-start text-center py-16 desktop:px-1 tablet:px-10">
           <h1 className="desktop:text-5xl tablet:text-6xl text-4xl font-bold leading-tight">
-            <FadeIn displacement={5} duration={1000} direction="tb">
-              {dict.headline}
-            </FadeIn>
+            {dict.headline}
           </h1>
-          <FadeIn displacement={5} duration={1000} direction="tb">
-            <p>{dict.subheadline}</p>
-          </FadeIn>
-          <FadeIn
-            direction="bt"
-            displacement={25}
-            duration={1000}
-            className="flex gap-3 justify-center desktop:justify-start"
-          >
-            <Link href="/contact">
+          <p>{dict.subheadline}</p>
+          <div className="flex gap-3 justify-center desktop:justify-start">
+            <Link href={`https://43us9n0vsgt.typeform.com/to/QDGWxlgl`}>
               <Button>{dict.cta_button}</Button>
             </Link>
-            <Link href="/learn-more">
+            <Link href={`#features`}>
               <Button variant="outline" className="text-blue-4">
                 {dict.learn_more}{" "}
                 {lang !== "ar" ? (
@@ -37,23 +27,16 @@ export default function HeroSection({ lang, dict }) {
                 )}
               </Button>
             </Link>
-          </FadeIn>
+          </div>
         </div>
-        <FadeIn
-          displacement={10}
-          duration={13000}
-          direction="rl"
-          langDir={lang === "ar" ? "rtl" : "ltr"}
-        >
-          <Image
-            src="/image/showcase.webp"
-            alt={dict.hero_image.DEFAULT}
-            width={1139}
-            height={612}
-            className="undraggable"
-            draggable={false}
-          />
-        </FadeIn>
+        <Image
+          src="/image/showcase.webp"
+          alt={dict.hero_image.DEFAULT}
+          width={1139}
+          height={612}
+          className="undraggable w-90%"
+          draggable={false}
+        />
       </div>
     </main>
   );

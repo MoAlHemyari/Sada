@@ -17,13 +17,15 @@ export default function DesktopNavigation({ lang, dict }) {
         className="w-[300px] tablet:w-[400px]"
       >
         <nav className="flex flex-col space-y-4 mt-8">
-          <Link href={`/${lang}/about`}>{dict.navbar.about}</Link>
-          <Link href={`/${lang}/features`}>{dict.navbar.features}</Link>
-          <Link href={`/${lang}/pricing`}>{dict.navbar.pricing}</Link>
-          <Link href={`/${lang}/careers`}>{dict.navbar.careers}</Link>
-          <Button variant="outline" className="w-full">
-            {dict.navbar.book_demo}
-          </Button>
+          <Link href={`#about`}>{dict.navbar.about}</Link>
+          <Link href={`#features`}>{dict.navbar.features}</Link>
+          {/* <Link href={`/${lang}/pricing`}>{dict.navbar.pricing}</Link> */}
+          <Link href={`https://43us9n0vsgt.typeform.com/to/SoDXgTpg`}>{dict.navbar.careers}</Link>
+          <Link href={`https://43us9n0vsgt.typeform.com/to/QDGWxlgl`}>
+            <Button variant="outline" className="w-full">
+              {dict.navbar.book_demo}
+            </Button>
+          </Link>
           <LanguageSwitcher lang={lang} className="w-full" />
         </nav>
       </SheetContent>
