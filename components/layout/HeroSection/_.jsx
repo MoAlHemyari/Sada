@@ -7,8 +7,8 @@ export default function HeroSection({ lang, dict }) {
   dict = dict.hero_section;
   return (
     <main className="container">
-      <div className="grid desktop:grid-cols-2 items-center gap-12 px-4">
-        <div className="space-y-6 desktop:text-start text-center py-16 desktop:px-1 tablet:px-10">
+      <div className="grid desktop:grid-cols-2 items-center gap-12 px-4 tablet:py-6">
+        <div className="space-y-6 desktop:text-start text-center py-2 tablet:py-16 desktop:px-1 tablet:px-10">
           <h1 className="desktop:text-5xl tablet:text-6xl text-4xl font-bold leading-tight">
             {dict.headline}
           </h1>

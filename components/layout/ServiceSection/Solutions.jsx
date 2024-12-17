@@ -1,4 +1,4 @@
-import Emoji from "@/components/component/Emoji"; 
+import Emoji from "@/components/component/Emoji";
 
 export default function Solutions({ dict }) {
   dict = dict.sections.solutions;
@@ -9,8 +9,8 @@ export default function Solutions({ dict }) {
         <p className="">{dict.description}</p>
       </div>
 
+
       <div className="grid tablet:grid-cols-2 gap-6 shrinked-width-50">
-        {/* Gatherings Card */}
         <div className="bg-blue-8 rounded-lg p-12 tablet:p-10">
           <div className="mb-4">
             <Emoji name="party-popper" alt="party-popper" size={32} />
@@ -23,10 +23,10 @@ export default function Solutions({ dict }) {
           </p>
         </div>
 
-        {/* Workspaces Card */}
+
         <div className="bg-blue-8 rounded-lg p-12 tablet:p-10">
           <div className="mb-4">
-          <Emoji name="briefcase" alt="briefcase" size={32} />
+            <Emoji name="briefcase" alt="briefcase" size={32} />
           </div>
           <h3 className="font-bold text-blue-1 mb-2">
             {dict.components.workspaces.headline}
@@ -36,10 +36,9 @@ export default function Solutions({ dict }) {
           </p>
         </div>
 
-        {/* Transit Hubs Card */}
         <div className="bg-blue-8 rounded-lg p-12 tablet:p-10">
           <div className="mb-4">
-          <Emoji name="station" alt="station" size={32} />
+            <Emoji name="station" alt="station" size={32} />
           </div>
           <h3 className="font-bold text-blue-1 mb-2">
             {dict.components.transit_hubs.headline}
@@ -49,10 +48,9 @@ export default function Solutions({ dict }) {
           </p>
         </div>
 
-        {/* Healthcare Card */}
         <div className="bg-blue-8 rounded-lg p-12 tablet:p-10">
           <div className="mb-4">
-          <Emoji name="stethoscope" alt="stethoscope" size={32} />
+            <Emoji name="stethoscope" alt="stethoscope" size={32} />
           </div>
           <h3 className="font-bold text-blue-1 mb-2">
             {dict.components.healthcare.headline}

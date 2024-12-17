@@ -18,7 +18,7 @@ export default async function Home({ params }) {
   return (
     <>
       <HeaderSection dict={dict} lang={lang} />
-      <FadeIn duration={500}>
+      <FadeIn duration={500} when="load">
         <HeroSection dict={dict} lang={lang} />
       </FadeIn>
       <FadeIn delay={300} duration={700} when="load">

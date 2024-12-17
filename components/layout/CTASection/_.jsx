@@ -15,7 +15,7 @@ export default function CTA({ dict, lang }) {
           </div>
           <div className="content-end desktop:justify-self-end desktop:col-span-3">
             <Link href={`/${lang}/contact`}>
-              <Button className="bg-blue-7 hover:bg-blue-6 text-blue-2 shadow-sm px-4 py-3">
+              <Button className="bg-blue-8 hover:bg-blue-7 text-blue-2 shadow-sm px-4 py-3">
                 {dict.cta_button}{" "}
                 {lang !== "ar" ? (
                   <ArrowRight className="ml-2 h-4 w-4" />

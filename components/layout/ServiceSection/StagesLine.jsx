@@ -32,7 +32,7 @@ export default function StagesLine({ dict, lang }) {
           clearInterval(timer)
           return prev
         })
-      }, 400) // Show a new stage every N ms
+      }, 250) // Show a new stage every N ms
 
       return () => clearInterval(timer)
     }

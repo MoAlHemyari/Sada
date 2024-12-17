@@ -1,6 +1,9 @@
 import Service from "./Service";
 import Features from "./Features";
 import Solutions from "./Solutions";
+import First from "./First";
+import Second from "./Second";
+import Third from "./Third";
 import Showcase from "@/components/ui/Showcase";
 
 export default function ServicesSection({ dict, lang }) {
@@ -17,6 +20,10 @@ export default function ServicesSection({ dict, lang }) {
             <Service dict={dict} lang={lang} />
             <Features dict={dict} />
             <Solutions dict={dict} />
+
+            <First />
+            <Second lang={lang} />
+            <Third lang={lang} />
         </section>
     );
 }
